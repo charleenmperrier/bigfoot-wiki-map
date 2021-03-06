@@ -6,4 +6,29 @@ body {
   h1 {
     color: #244751;
   }
+
+  h3 {
+    color: #ff0000;
+  }
+}
+
+// nav bar with Title and user
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: 10vh;
+}
+
+
+// map layout
+#map {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  width: 75%;
+  margin: auto;
+  padding: auto;
 }

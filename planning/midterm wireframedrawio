@@ -1,0 +1,196 @@
+<mxfile host="app.diagrams.net" modified="2021-03-06T03:38:34.201Z" agent="5.0 (X11)" etag="hm641Zb4jA4Iczg0ur5w" version="14.4.4" type="github">
+  <diagram name="Page-1" id="2cc2dc42-3aac-f2a9-1cec-7a8b7cbee084">
+    <mxGraphModel dx="6057" dy="2214" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ePZ0_F_5HXV0sJobStVW-74" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="7026571954dc6520-1" target="ePZ0_F_5HXV0sJobStVW-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ePZ0_F_5HXV0sJobStVW-75" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="7026571954dc6520-1" target="ePZ0_F_5HXV0sJobStVW-26">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7026571954dc6520-1" value="" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.containers.browserWindow;rSize=0;strokeColor=#666666;mainText=,;recursiveResize=0;rounded=0;labelBackgroundColor=none;fontFamily=Verdana;fontSize=12" parent="1" vertex="1">
+          <mxGeometry x="-360" y="15" width="1050" height="820" as="geometry" />
+        </mxCell>
+        <mxCell id="7026571954dc6520-2" value="Page 1" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.containers.anchor;fontSize=17;fontColor=#666666;align=left;" parent="7026571954dc6520-1" vertex="1">
+          <mxGeometry x="60" y="12" width="110" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="7026571954dc6520-3" value="https://www.default.com" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.containers.anchor;rSize=0;fontSize=17;fontColor=#666666;align=left;" parent="7026571954dc6520-1" vertex="1">
+          <mxGeometry x="130" y="60" width="250" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="7026571954dc6520-4" value="Big Foot Tracker" style="text;html=1;points=[];align=left;verticalAlign=top;spacingTop=-4;fontSize=30;fontFamily=Verdana" parent="7026571954dc6520-1" vertex="1">
+          <mxGeometry x="30" y="140" width="340" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="7026571954dc6520-10" value="LOGIN/ Username" style="text;html=1;points=[];align=left;verticalAlign=top;spacingTop=-4;fontSize=15;fontFamily=Verdana" parent="7026571954dc6520-1" vertex="1">
+          <mxGeometry x="800" y="160" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="7026571954dc6520-15" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;strokeWidth=1;shape=mxgraph.mockup.markup.line;strokeColor=#999999;rounded=0;labelBackgroundColor=none;fillColor=#ffffff;fontFamily=Verdana;fontSize=12;fontColor=#000000;" parent="7026571954dc6520-1" vertex="1">
+          <mxGeometry y="220" width="1050" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="7026571954dc6520-16" value="Big Foot Sightings" style="text;html=1;points=[];align=left;verticalAlign=top;spacingTop=-4;fontSize=15;fontFamily=Verdana" parent="7026571954dc6520-1" vertex="1">
+          <mxGeometry x="60" y="240" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="7026571954dc6520-21" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;strokeWidth=1;shape=mxgraph.mockup.markup.line;strokeColor=#999999;rounded=0;labelBackgroundColor=none;fillColor=#ffffff;fontFamily=Verdana;fontSize=12;fontColor=#000000;" parent="7026571954dc6520-1" vertex="1">
+          <mxGeometry y="270" width="1050" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="7026571954dc6520-22" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;strokeWidth=1;shape=mxgraph.mockup.graphics.simpleIcon;strokeColor=#999999;fillColor=#ffffff;rounded=0;labelBackgroundColor=none;fontFamily=Verdana;fontSize=12;fontColor=#000000;" parent="7026571954dc6520-1" vertex="1">
+          <mxGeometry x="180" y="335" width="200" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="7026571954dc6520-31" value="MAP LOCATION: Vancouver" style="text;html=1;points=[];align=left;verticalAlign=top;spacingTop=-4;fontSize=15;fontFamily=Verdana" parent="7026571954dc6520-1" vertex="1">
+          <mxGeometry x="430" y="363" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ePZ0_F_5HXV0sJobStVW-1" value="" style="dashed=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;align=center;shape=mxgraph.gmdl.heart;strokeColor=none;fillColor=#737373;shadow=0;" vertex="1" parent="7026571954dc6520-1">
+          <mxGeometry x="349" y="345" width="20" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="ePZ0_F_5HXV0sJobStVW-2" value="" style="aspect=fixed;html=1;points=[];align=center;image;fontSize=12;image=img/lib/azure2/general/Heart.svg;opacity=50;" vertex="1" parent="7026571954dc6520-1">
+          <mxGeometry x="349" y="343.31" width="21" height="19.69" as="geometry" />
+        </mxCell>
+        <mxCell id="ePZ0_F_5HXV0sJobStVW-3" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;strokeWidth=1;shape=mxgraph.mockup.graphics.simpleIcon;strokeColor=#999999;fillColor=#ffffff;rounded=0;labelBackgroundColor=none;fontFamily=Verdana;fontSize=12;fontColor=#000000;" vertex="1" parent="7026571954dc6520-1">
+          <mxGeometry x="180" y="580" width="200" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="ePZ0_F_5HXV0sJobStVW-4" value="MAP LOCATION: N Vancouver" style="text;html=1;points=[];align=left;verticalAlign=top;spacingTop=-4;fontSize=15;fontFamily=Verdana" vertex="1" parent="7026571954dc6520-1">
+          <mxGeometry x="430" y="620" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ePZ0_F_5HXV0sJobStVW-6" value="&lt;h1&gt;&lt;br&gt;&lt;/h1&gt;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;opacity=50;" vertex="1" parent="7026571954dc6520-1">
+          <mxGeometry x="430" y="405" width="470" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="ePZ0_F_5HXV0sJobStVW-7" value="&lt;h1&gt;&lt;br&gt;&lt;/h1&gt;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;opacity=50;" vertex="1" parent="7026571954dc6520-1">
+          <mxGeometry x="430" y="645" width="470" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="ePZ0_F_5HXV0sJobStVW-8" value="" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.containers.browserWindow;rSize=0;strokeColor=#666666;mainText=,;recursiveResize=0;rounded=0;labelBackgroundColor=none;fontFamily=Verdana;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="-360" y="940" width="1050" height="820" as="geometry" />
+        </mxCell>
+        <mxCell id="ePZ0_F_5HXV0sJobStVW-9" value="Page 1" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.containers.anchor;fontSize=17;fontColor=#666666;align=left;" vertex="1" parent="ePZ0_F_5HXV0sJobStVW-8">
+          <mxGeometry x="60" y="12" width="110" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="ePZ0_F_5HXV0sJobStVW-10" value="https://www.default.com" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.containers.anchor;rSize=0;fontSize=17;fontColor=#666666;align=left;" vertex="1" parent="ePZ0_F_5HXV0sJobStVW-8">
+          <mxGeometry x="130" y="60" width="250" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="ePZ0_F_5HXV0sJobStVW-11" value="Big Foot Tracker" style="text;html=1;points=[];align=left;verticalAlign=top;spacingTop=-4;fontSize=30;fontFamily=Verdana" vertex="1" parent="ePZ0_F_5HXV0sJobStVW-8">
+          <mxGeometry x="30" y="140" width="340" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="ePZ0_F_5HXV0sJobStVW-12" value="LOGIN/ Username" style="text;html=1;points=[];align=left;verticalAlign=top;spacingTop=-4;fontSize=15;fontFamily=Verdana" vertex="1" parent="ePZ0_F_5HXV0sJobStVW-8">
+          <mxGeometry x="790" y="140" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ePZ0_F_5HXV0sJobStVW-13" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;strokeWidth=1;shape=mxgraph.mockup.markup.line;strokeColor=#999999;rounded=0;labelBackgroundColor=none;fillColor=#ffffff;fontFamily=Verdana;fontSize=12;fontColor=#000000;" vertex="1" parent="ePZ0_F_5HXV0sJobStVW-8">
+          <mxGeometry y="220" width="1050" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ePZ0_F_5HXV0sJobStVW-14" value="Big Foot Sightings" style="text;html=1;points=[];align=left;verticalAlign=top;spacingTop=-4;fontSize=15;fontFamily=Verdana" vertex="1" parent="ePZ0_F_5HXV0sJobStVW-8">
+          <mxGeometry x="60" y="240" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ePZ0_F_5HXV0sJobStVW-15" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;strokeWidth=1;shape=mxgraph.mockup.markup.line;strokeColor=#999999;rounded=0;labelBackgroundColor=none;fillColor=#ffffff;fontFamily=Verdana;fontSize=12;fontColor=#000000;" vertex="1" parent="ePZ0_F_5HXV0sJobStVW-8">
+          <mxGeometry y="270" width="1050" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ePZ0_F_5HXV0sJobStVW-16" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;strokeWidth=1;shape=mxgraph.mockup.graphics.simpleIcon;strokeColor=#999999;fillColor=#ffffff;rounded=0;labelBackgroundColor=none;fontFamily=Verdana;fontSize=12;fontColor=#000000;" vertex="1" parent="ePZ0_F_5HXV0sJobStVW-8">
+          <mxGeometry x="180" y="335" width="690" height="405" as="geometry" />
+        </mxCell>
+        <mxCell id="ePZ0_F_5HXV0sJobStVW-17" value="MAP LOCATION: Vancouver" style="text;html=1;points=[];align=left;verticalAlign=top;spacingTop=-4;fontSize=15;fontFamily=Verdana" vertex="1" parent="ePZ0_F_5HXV0sJobStVW-8">
+          <mxGeometry x="420" y="305" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ePZ0_F_5HXV0sJobStVW-19" value="" style="aspect=fixed;html=1;points=[];align=center;image;fontSize=12;image=img/lib/azure2/general/Heart.svg;opacity=50;" vertex="1" parent="ePZ0_F_5HXV0sJobStVW-8">
+          <mxGeometry x="840" y="343.31" width="21" height="19.69" as="geometry" />
+        </mxCell>
+        <mxCell id="ePZ0_F_5HXV0sJobStVW-22" value="&lt;h1&gt;&lt;br&gt;&lt;/h1&gt;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;opacity=50;" vertex="1" parent="ePZ0_F_5HXV0sJobStVW-8">
+          <mxGeometry x="310" y="710" width="470" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="ePZ0_F_5HXV0sJobStVW-76" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="ePZ0_F_5HXV0sJobStVW-26" target="ePZ0_F_5HXV0sJobStVW-61">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ePZ0_F_5HXV0sJobStVW-26" value="" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.containers.browserWindow;rSize=0;strokeColor=#666666;mainText=,;recursiveResize=0;rounded=0;labelBackgroundColor=none;fontFamily=Verdana;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="-1820" y="15" width="1050" height="820" as="geometry" />
+        </mxCell>
+        <mxCell id="ePZ0_F_5HXV0sJobStVW-27" value="Page 1" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.containers.anchor;fontSize=17;fontColor=#666666;align=left;" vertex="1" parent="ePZ0_F_5HXV0sJobStVW-26">
+          <mxGeometry x="60" y="12" width="110" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="ePZ0_F_5HXV0sJobStVW-28" value="https://www.default.com" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.containers.anchor;rSize=0;fontSize=17;fontColor=#666666;align=left;" vertex="1" parent="ePZ0_F_5HXV0sJobStVW-26">
+          <mxGeometry x="130" y="60" width="250" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="ePZ0_F_5HXV0sJobStVW-29" value="Big Foot Tracker" style="text;html=1;points=[];align=left;verticalAlign=top;spacingTop=-4;fontSize=30;fontFamily=Verdana" vertex="1" parent="ePZ0_F_5HXV0sJobStVW-26">
+          <mxGeometry x="30" y="140" width="340" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="ePZ0_F_5HXV0sJobStVW-30" value="LOGGED IN USER" style="text;html=1;points=[];align=left;verticalAlign=top;spacingTop=-4;fontSize=15;fontFamily=Verdana" vertex="1" parent="ePZ0_F_5HXV0sJobStVW-26">
+          <mxGeometry x="800" y="160" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ePZ0_F_5HXV0sJobStVW-31" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;strokeWidth=1;shape=mxgraph.mockup.markup.line;strokeColor=#999999;rounded=0;labelBackgroundColor=none;fillColor=#ffffff;fontFamily=Verdana;fontSize=12;fontColor=#000000;" vertex="1" parent="ePZ0_F_5HXV0sJobStVW-26">
+          <mxGeometry y="220" width="1050" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ePZ0_F_5HXV0sJobStVW-32" value="FAVOURITES" style="text;html=1;points=[];align=left;verticalAlign=top;spacingTop=-4;fontSize=15;fontFamily=Verdana" vertex="1" parent="ePZ0_F_5HXV0sJobStVW-26">
+          <mxGeometry x="60" y="240" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ePZ0_F_5HXV0sJobStVW-33" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;strokeWidth=1;shape=mxgraph.mockup.markup.line;strokeColor=#999999;rounded=0;labelBackgroundColor=none;fillColor=#ffffff;fontFamily=Verdana;fontSize=12;fontColor=#000000;" vertex="1" parent="ePZ0_F_5HXV0sJobStVW-26">
+          <mxGeometry y="270" width="1050" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ePZ0_F_5HXV0sJobStVW-34" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;strokeWidth=1;shape=mxgraph.mockup.graphics.simpleIcon;strokeColor=#999999;fillColor=#ffffff;rounded=0;labelBackgroundColor=none;fontFamily=Verdana;fontSize=12;fontColor=#000000;" vertex="1" parent="ePZ0_F_5HXV0sJobStVW-26">
+          <mxGeometry x="180" y="335" width="200" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="ePZ0_F_5HXV0sJobStVW-35" value="MAP LOCATION: Vancouver" style="text;html=1;points=[];align=left;verticalAlign=top;spacingTop=-4;fontSize=15;fontFamily=Verdana" vertex="1" parent="ePZ0_F_5HXV0sJobStVW-26">
+          <mxGeometry x="430" y="363" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ePZ0_F_5HXV0sJobStVW-36" value="" style="dashed=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;align=center;shape=mxgraph.gmdl.heart;strokeColor=none;fillColor=#737373;shadow=0;" vertex="1" parent="ePZ0_F_5HXV0sJobStVW-26">
+          <mxGeometry x="349" y="345" width="20" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="ePZ0_F_5HXV0sJobStVW-37" value="" style="aspect=fixed;html=1;points=[];align=center;image;fontSize=12;image=img/lib/azure2/general/Heart.svg;opacity=50;" vertex="1" parent="ePZ0_F_5HXV0sJobStVW-26">
+          <mxGeometry x="349" y="343.31" width="21" height="19.69" as="geometry" />
+        </mxCell>
+        <mxCell id="ePZ0_F_5HXV0sJobStVW-38" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;strokeWidth=1;shape=mxgraph.mockup.graphics.simpleIcon;strokeColor=#999999;fillColor=#ffffff;rounded=0;labelBackgroundColor=none;fontFamily=Verdana;fontSize=12;fontColor=#000000;" vertex="1" parent="ePZ0_F_5HXV0sJobStVW-26">
+          <mxGeometry x="180" y="580" width="200" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="ePZ0_F_5HXV0sJobStVW-39" value="MAP LOCATION: N Vancouver" style="text;html=1;points=[];align=left;verticalAlign=top;spacingTop=-4;fontSize=15;fontFamily=Verdana" vertex="1" parent="ePZ0_F_5HXV0sJobStVW-26">
+          <mxGeometry x="430" y="620" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ePZ0_F_5HXV0sJobStVW-40" value="&lt;h1&gt;&lt;br&gt;&lt;/h1&gt;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;opacity=50;" vertex="1" parent="ePZ0_F_5HXV0sJobStVW-26">
+          <mxGeometry x="430" y="405" width="470" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="ePZ0_F_5HXV0sJobStVW-41" value="&lt;h1&gt;&lt;br&gt;&lt;/h1&gt;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;opacity=50;" vertex="1" parent="ePZ0_F_5HXV0sJobStVW-26">
+          <mxGeometry x="430" y="645" width="470" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="ePZ0_F_5HXV0sJobStVW-42" value="&lt;div&gt;Create New Map&lt;/div&gt;" style="text;html=1;points=[];align=left;verticalAlign=top;spacingTop=-4;fontSize=15;fontFamily=Verdana" vertex="1" parent="ePZ0_F_5HXV0sJobStVW-26">
+          <mxGeometry x="680" y="240" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ePZ0_F_5HXV0sJobStVW-60" value="Favourites" style="text;html=1;points=[];align=left;verticalAlign=top;spacingTop=-4;fontSize=15;fontFamily=Verdana" vertex="1" parent="ePZ0_F_5HXV0sJobStVW-26">
+          <mxGeometry x="840" y="240" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ePZ0_F_5HXV0sJobStVW-73" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.555;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="ePZ0_F_5HXV0sJobStVW-61" target="7026571954dc6520-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ePZ0_F_5HXV0sJobStVW-61" value="" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.containers.browserWindow;rSize=0;strokeColor=#666666;mainText=,;recursiveResize=0;rounded=0;labelBackgroundColor=none;fontFamily=Verdana;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="-1820" y="940" width="1050" height="820" as="geometry" />
+        </mxCell>
+        <mxCell id="ePZ0_F_5HXV0sJobStVW-62" value="Page 1" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.containers.anchor;fontSize=17;fontColor=#666666;align=left;" vertex="1" parent="ePZ0_F_5HXV0sJobStVW-61">
+          <mxGeometry x="60" y="12" width="110" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="ePZ0_F_5HXV0sJobStVW-63" value="https://www.default.com" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.containers.anchor;rSize=0;fontSize=17;fontColor=#666666;align=left;" vertex="1" parent="ePZ0_F_5HXV0sJobStVW-61">
+          <mxGeometry x="130" y="60" width="250" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="ePZ0_F_5HXV0sJobStVW-64" value="Big Foot Tracker" style="text;html=1;points=[];align=left;verticalAlign=top;spacingTop=-4;fontSize=30;fontFamily=Verdana" vertex="1" parent="ePZ0_F_5HXV0sJobStVW-61">
+          <mxGeometry x="30" y="140" width="340" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="ePZ0_F_5HXV0sJobStVW-65" value="LOGIN/ Username" style="text;html=1;points=[];align=left;verticalAlign=top;spacingTop=-4;fontSize=15;fontFamily=Verdana" vertex="1" parent="ePZ0_F_5HXV0sJobStVW-61">
+          <mxGeometry x="790" y="140" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ePZ0_F_5HXV0sJobStVW-66" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;strokeWidth=1;shape=mxgraph.mockup.markup.line;strokeColor=#999999;rounded=0;labelBackgroundColor=none;fillColor=#ffffff;fontFamily=Verdana;fontSize=12;fontColor=#000000;" vertex="1" parent="ePZ0_F_5HXV0sJobStVW-61">
+          <mxGeometry y="220" width="1050" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ePZ0_F_5HXV0sJobStVW-67" value="CREATE MAP/ EDIT" style="text;html=1;points=[];align=left;verticalAlign=top;spacingTop=-4;fontSize=15;fontFamily=Verdana" vertex="1" parent="ePZ0_F_5HXV0sJobStVW-61">
+          <mxGeometry x="61" y="240" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ePZ0_F_5HXV0sJobStVW-68" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;strokeWidth=1;shape=mxgraph.mockup.markup.line;strokeColor=#999999;rounded=0;labelBackgroundColor=none;fillColor=#ffffff;fontFamily=Verdana;fontSize=12;fontColor=#000000;" vertex="1" parent="ePZ0_F_5HXV0sJobStVW-61">
+          <mxGeometry y="270" width="1050" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ePZ0_F_5HXV0sJobStVW-69" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;strokeWidth=1;shape=mxgraph.mockup.graphics.simpleIcon;strokeColor=#999999;fillColor=#ffffff;rounded=0;labelBackgroundColor=none;fontFamily=Verdana;fontSize=12;fontColor=#000000;" vertex="1" parent="ePZ0_F_5HXV0sJobStVW-61">
+          <mxGeometry x="171" y="335" width="690" height="405" as="geometry" />
+        </mxCell>
+        <mxCell id="ePZ0_F_5HXV0sJobStVW-70" value="INPUT LOCATION" style="text;html=1;points=[];align=left;verticalAlign=top;spacingTop=-4;fontSize=15;fontFamily=Verdana" vertex="1" parent="ePZ0_F_5HXV0sJobStVW-61">
+          <mxGeometry x="420" y="305" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ePZ0_F_5HXV0sJobStVW-71" value="" style="aspect=fixed;html=1;points=[];align=center;image;fontSize=12;image=img/lib/azure2/general/Heart.svg;opacity=50;" vertex="1" parent="ePZ0_F_5HXV0sJobStVW-61">
+          <mxGeometry x="840" y="343.31" width="21" height="19.69" as="geometry" />
+        </mxCell>
+        <mxCell id="ePZ0_F_5HXV0sJobStVW-72" value="&lt;div&gt;INPUT DESCRIPTION&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;opacity=50;" vertex="1" parent="ePZ0_F_5HXV0sJobStVW-61">
+          <mxGeometry x="310" y="770" width="470" height="120" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

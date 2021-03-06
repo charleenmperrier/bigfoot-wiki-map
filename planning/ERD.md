@@ -1,28 +1,29 @@
 
 create table USERS (
-id serial primary key
-username
-favourites - FK favourites id
+id SERIAL PRIMARY KEY NOT NULL,
+name VARCHAR(255) NOT NULL,
+favourite_id INTEGER REFERENCES favourites(id) ON DELETE CASCADE
 )
-
-
 
 
 create table MAPS (
-id serial primary key
-name
-user_id FK
-
+id SERIAL PRIMARY KEY NOT NULL,
+name VARCHAR(255) NOT NULL,
+user_id INTEGER REFERENCES users(id) ON DELETE CASCADE
 )
-
-
 
 
 create table PINS(
-id serial primary key
+id SERIAL PRIMARY KEY NOT NULL,
+title VARCHAR(255)
+description TEXT
+picture VARCHAR(255)
+lon INTEGER
+lat INTEGER
 map_id FK
 user_id  FK 
 )
+
 
 create table FAVOURITES (
   id serial primary key

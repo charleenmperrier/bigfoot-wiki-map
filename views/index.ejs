@@ -35,7 +35,7 @@
     <script>
 
       // map tile image
-      let map = L.map('map').setView([0, 0], 1);
+      let map = L.map('map').setView([49, -123], 3);
       L.tileLayer('https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=wpKyMC536a0ZlXqAX7iu', {
         attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>',
       }).addTo(map);
@@ -44,7 +44,7 @@
       let marker = L.marker([49.246292, -123.116226], {
         title: "big foot sighting",
 
-      }).addTo(map).bindPopup('<h1> Marker </h1> <div> <img src="https://i.pinimg.com/originals/43/eb/96/43eb96608de40c2d0bd7fbf387d5df87.jpg" height="150px" width="auto"/> </div> <p> spottted bigfoot at McDonalds!!! </p>');
+      }).addTo(map).bindPopup('<h1> Marker </h1> <div> <img src="https://i.pinimg.com/originals/43/eb/96/43eb96608de40c2d0bd7fbf387d5df87.jpg" height="150px" width="auto"/> <p> spottted bigfoot at McDonalds!!! </p> </div> ');
 
       // pop up Image hardcoded test - Clicking for popup image, no set marker
 

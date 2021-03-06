@@ -15,18 +15,18 @@ user_id INTEGER REFERENCES users(id) ON DELETE CASCADE
 
 create table PINS(
 id SERIAL PRIMARY KEY NOT NULL,
-title VARCHAR(255)
-description TEXT
-picture VARCHAR(255)
-lon INTEGER
-lat INTEGER
-map_id FK
-user_id  FK 
+title VARCHAR(255) NOT NULL,
+description TEXT NOT NULL,
+picture VARCHAR(255),
+lon INTEGER NOT NULL,
+lat INTEGER NOT NULL,
+map_id INTEGER REFERENCES maps(id) ON DELETE CASCADE,
+user_id INTEGER REFERENCES users(id) ON DELETE CASCADE
 )
 
 
 create table FAVOURITES (
-  id serial primary key
-  user_id FK user
-  map_id FK maps 
+  id SERIAL PRIMARY KEY NOT NULL,
+  map_id INTEGER REFERENCES maps(id) ON DELETE CASCADE,
+  user_id INTEGER REFERENCES users(id) ON DELETE CASCADE
 )

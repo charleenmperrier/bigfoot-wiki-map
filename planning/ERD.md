@@ -3,7 +3,7 @@ create table USERS (
 id SERIAL PRIMARY KEY NOT NULL,
 name VARCHAR(255) NOT NULL,
 favourite_id INTEGER REFERENCES favourites(id) ON DELETE CASCADE
-)
+);
 
 
 create table MAPS (

@@ -7,9 +7,6 @@ body {
     color: #244751;
   }
 
-  h3 {
-    color: #ff0000;
-  }
 }
 
 // nav bar with Title and user
@@ -22,6 +19,13 @@ nav {
   padding-bottom: 10vh;
 }
 
+header {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 12%;
+  margin-top: 5%;
+  color: black;
+}
 
 // map layout
 #map {
@@ -31,6 +35,6 @@ nav {
   height: 500px;
   width: 75%;
   margin: auto;
-  margin-top: 10%;
+  margin-top: 5%;
   padding: auto;
 }

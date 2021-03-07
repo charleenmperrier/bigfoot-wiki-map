@@ -25,10 +25,15 @@
         <h1>Big Foot Tracker</h1>
       </div>
       <div class="sideTitle">
-         <h3>User/ Login</h3>
+         <!-- <h3>User/ Login</h3> -->
          <button type="submit" class="btn btn-primary">Login</button>
       </div>
     </nav>
+
+    <header>
+      <h3>Big Foot sightings</h3>
+
+    </header>
     <!-- map basic test -->
 
     <div id="map"></div>
@@ -41,6 +46,8 @@
         attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>',
         noWrap: false,
       }).addTo(map);
+
+
 
       // // hard coded map marker test, Title, Image, Description
 
@@ -63,9 +70,8 @@
       lat = e.latlng.lat;
       lon = e.latlng.lng;
 
-      // //Clear existing marker,
-
-      if (theMarker != undefined) {
+      // //Clears existing marker by placing elsewhere
+      if (theMarker !== undefined) {
               map.removeLayer(theMarker);
         };
 

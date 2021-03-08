@@ -9,7 +9,7 @@ tiles.addTo(map);
 getData()
 
 async function getData() {
-  const response = await fetch('api');
+  const response = await fetch('/api/pins');
   const data = await response.json();
 
   for (item of data) {
@@ -18,7 +18,7 @@ async function getData() {
       title: "big foot sighting",
     }).addTo(map);
 
-    const txt = `<h1> ${item.title} </h1> <div> <img src= ${'"'+item.pictureUrl+'"'} height="150px" width="auto"/> <p id="description"> ${item.description} </p> <p id="longLat">location at ${[(item.lat).toFixed(3), (item.lon).toFixed(3)]} </p></div> `;
+    let txt = `<h1> ${item.title} </h1> <div> <img src= ${'"'+item.picture_url+'"'} height="150px" width="auto"/> <p id="description"> ${item.description} </p> <p id="longLat">location at ${[(item.lat).toFixed(3), (item.lon).toFixed(3)]} </p></div> `;
 
     marker.bindPopup(txt);
   }

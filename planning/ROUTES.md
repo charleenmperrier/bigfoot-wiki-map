@@ -24,3 +24,6 @@ Read      get   /favourites/:id
 Edit      post  /favourites/:id
 Add       post  /favourites
 Delete    post  /favourites/:id/delete
+
+
+

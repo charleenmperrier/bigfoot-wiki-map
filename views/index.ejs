@@ -24,8 +24,7 @@
         <h1>Big Foot Tracker</h1>
       </div>
       <div class="sideTitle">
-         <h3>User/ Login</h3>
-         <button type="submit" class="btn btn-primary">Login</button>
+         <button type="submit" class="btn btn-primary">USER Login</button>
       </div>
     </nav>
 
@@ -39,44 +38,50 @@
     <div id="map2"></div>
     <div id="map3"></div>
 
+
+
     <script>
 
       // map tile image
-      let map = L.map('map').setView([49.246292, -123.116226], 10);
+      let map = L.map('map').setView([49.246292, -123.116226], 12);
       L.tileLayer('https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=wpKyMC536a0ZlXqAX7iu', {
+        zoomControl: false,
         attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>',
-        noWrap: false,
       }).addTo(map);
-
-      let map2 = L.map('map2').setView([48.858190, 2.294470], 16);
-
-
-    L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-      attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'
-    }).addTo(map2);
-
-    let map3 = L.map('map3').setView([48.858190, 2.294470], 16);
-
-    L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-      attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'
-    }).addTo(map3);
-
-
-
-
-
-
 
       // // hard coded map marker test, Title, Image, Description
 
       let marker = L.marker([49.246292, -123.116226], {
-        title: "big foot sighting",
-
+      title: "big foot sighting",
       }).addTo(map).bindPopup('<h1> Vancouver </h1> <div> <img src="https://i.pinimg.com/originals/43/eb/96/43eb96608de40c2d0bd7fbf387d5df87.jpg" height="150px" width="auto"/> <p id="description"> spottted bigfoot at McDonalds!?!? </p> <p id="longLat">location at 49.246292, -123.116226</p></div> ');
-
       // // example popup information scheme for bindPopup ^^^
-
       // <h1> `${location}` </h1> <div> `<img src= {image} + height="150px" width="auto"/> <p id="description"> ${description} </p> <p id="longLat"> location at ${longitude, latitude}</p>` </div>
+
+
+
+      let map2 = L.map('map2').setView([49.463,-119.602], 12);
+      L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+        attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'
+      }).addTo(map2);
+
+      let marker2 = L.marker([49.463,-119.602], {
+      title: "big foot sighting",
+      }).addTo(map2).bindPopup('<h1> Vancouver </h1> <div> <img src="https://i.pinimg.com/originals/43/eb/96/43eb96608de40c2d0bd7fbf387d5df87.jpg" height="150px" width="auto"/> <p id="description"> spottted bigfoot at McDonalds!?!? </p> <p id="longLat">location at 49.246292, -123.116226</p></div> ');
+
+
+
+      let map3 = L.map('map3').setView([49.709,-123.176], 12);
+      L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+        attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'
+      }).addTo(map3);
+
+      let marker3 = L.marker([49.709,-123.176], {
+      title: "big foot sighting",
+      }).addTo(map3).bindPopup('<h1> Vancouver </h1> <div> <img src="https://i.pinimg.com/originals/43/eb/96/43eb96608de40c2d0bd7fbf387d5df87.jpg" height="150px" width="auto"/> <p id="description"> spottted bigfoot at McDonalds!?!? </p> <p id="longLat">location at 49.246292, -123.116226</p></div> ');
+
+
+
+
 
 
 

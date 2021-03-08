@@ -32,15 +32,19 @@
       <h3>Big Foot sightings</h3>
 
     </header>
+
     <!-- map basic test -->
 
     <div id="map"></div>
-    <div id="map2"></div>
-    <div id="map3"></div>
+    <script src="/scripts/map.js"> </script>
 
+    <!-- <main id="map-container">
+      <div id="map"></div>
+      <div id="map2"></div>
+      <div id="map3"></div>
+    </main> -->
 
-
-    <script>
+    <!-- <script>
 
       // map tile image
       let map = L.map('map').setView([49.246292, -123.116226], 12);
@@ -88,26 +92,26 @@
 
 
 
-      // User adding marker and removing marker, popups hardcoded
+      // // User adding marker and removing marker, popups hardcoded
 
-      let theMarker = {};
+      // let theMarker = {};
 
-      map.on('click',function(e){
-      lat = e.latlng.lat;
-      lon = e.latlng.lng;
+      // map.on('click',function(e){
+      // lat = e.latlng.lat;
+      // lon = e.latlng.lng;
 
-      // //Clears existing marker by placing elsewhere
-      if (theMarker !== undefined) {
-              map.removeLayer(theMarker);
-        };
+      // // //Clears existing marker by placing elsewhere
+      // if (theMarker !== undefined) {
+      //         map.removeLayer(theMarker);
+      //   };
 
-      //Add a marker to show where you clicked.
-      theMarker = L.marker([lat,lon]).addTo(map).bindPopup(`<h1> Vancouver </h1> <div> <img src="https://i.pinimg.com/originals/43/eb/96/43eb96608de40c2d0bd7fbf387d5df87.jpg" height="150px" width="auto"/> <p id="description"> spotted bigfoot at McDonalds!?!? </p> <p id="longLat">location at ${[(lat).toFixed(3), (lon).toFixed(3)]} </p></div> `);
-      });
+      // //Add a marker to show where you clicked.
+      // theMarker = L.marker([lat,lon]).addTo(map).bindPopup(`<h1> Vancouver </h1> <div> <img src="https://i.pinimg.com/originals/43/eb/96/43eb96608de40c2d0bd7fbf387d5df87.jpg" height="150px" width="auto"/> <p id="description"> spotted bigfoot at McDonalds!?!? </p> <p id="longLat">location at ${[(lat).toFixed(3), (lon).toFixed(3)]} </p></div> `);
+      // });
 
 
 
-    </script>
+    </script> -->
 
   </body>
 </html>

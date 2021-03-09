@@ -1,3 +1,4 @@
+// Map Element on page
 let map = L.map('map').setView([47, -101.2996], 5);
 const attribution = '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>';
 const tileUrl = 'https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=wpKyMC536a0ZlXqAX7iu';
@@ -11,7 +12,7 @@ getData()
 
 
 
-
+// Map Marker, adds data from db to map marker popups
 async function getData() {
   const response = await fetch('/api/pins');
   const data = await response.json();

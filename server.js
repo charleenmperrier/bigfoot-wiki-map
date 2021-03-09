@@ -2,13 +2,15 @@
 require('dotenv').config();
 
 // Web server config
-const PORT       = process.env.PORT || 8080;
-const ENV        = process.env.ENV || "development";
-const express    = require("express");
-const bodyParser = require("body-parser");
-const sass       = require("node-sass-middleware");
-const app        = express();
-const morgan     = require('morgan');
+const PORT          = process.env.PORT || 8080;
+const ENV           = process.env.ENV || "development";
+const express       = require("express");
+const bodyParser    = require("body-parser");
+const sass          = require("node-sass-middleware");
+const app           = express();
+const morgan        = require('morgan');
+const cookieSession = require('cookie-session')
+// const cookieParser = require('cookie-parser')
 
 // PG database client/connection setup
 const { Pool } = require('pg');
@@ -30,6 +32,11 @@ app.use("/styles", sass({
   outputStyle: 'expanded'
 }));
 app.use(express.static("public"));
+// app.use(cookieParser())
+app.use(cookieSession({
+  name: 'session',
+  keys: ['key1', 'key2']
+}));
 
 // Separated Routes for each Resource
 // Note: Feel free to replace the example routes below with your own
@@ -49,19 +56,29 @@ app.use("/api/widgets", widgetsRoutes(db));
 // Warning: avoid creating more routes in this file!
 // Separate them into separate routes files (see above).
 app.get("/", (req, res) => {
-  res.render("index");
+
+  const username = req.session.user_id;
+  const templateVars = {username}
+  res.render("index", templateVars);
 });
 
 
 // Logged in page
-app.get("/login", (req, res) => {
-  // req.session.user_id = req.params.id;
-  // res.redirect('/login');
-  res.render("logged-in");
+app.post("/login", (req, res) => {
+
+
+
+  console.log('req.body: ', req.body)
+
+
+    req.session.user_id = req.body.username;
+
+  res.redirect('/')
 });
 
 app.get("/logout", (req, res) => {
   // req.session.user_id = req.params.id;
+  req.session = null;
   res.redirect('/');
 
 });

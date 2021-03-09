@@ -24,7 +24,14 @@
         <h1>Big Foot Tracker</h1>
       </div>
       <div class="sideTitle">
-         <form method='GET' action="/login"> <button type="submit" class="btn btn-primary">USER Login</button></form>
+        <% if (!username) { %>
+         <form method='POST' action="/login">
+          <input name='username'type="text" />
+          <button type="submit" class="btn btn-primary">USER Login</button>
+        </form>
+        <% } else { %>
+          <span> <%= username %> </span>
+        <% } %>
       </div>
     </nav>
 

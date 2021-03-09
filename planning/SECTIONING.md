@@ -80,3 +80,8 @@
 - Nav bar Header-> Title, user/login
 
 - Body -> Map image, Map location name, map heart
+
+
+# Kevin's Monday - Tuesday notes
+- add path for like button to push into a favourites list
+- research method of submitting/ deleting personal marker data

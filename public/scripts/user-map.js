@@ -19,7 +19,7 @@ async function getData() {
       title: "big foot sighting",
     }).addTo(map);
 
-    let txt = `<h1> ${item.title} </h1> <div> <img src= ${'"'+item.picture_url+'"'} height="150px" width="auto"/> <p id="description"> ${item.description} </p> <p id="longLat">location at ${[(item.lat).toFixed(2), (item.lon).toFixed(2)]} </p></div> `;
+    let txt = `<h1> ${item.title} </h1> <div> <img src= ${'"'+item.picture_url+'"'} height="150px" width="auto"/> <p id="description"> ${item.description} </p> <p id="longLat">location at ${[(item.lat).toFixed(2), (item.lon).toFixed(2)]} </p></div> <i class="fa fa-heart"></i> `;
 
     marker.bindPopup(txt);
   }
@@ -43,6 +43,6 @@ async function getData() {
         };
 
       //Add a marker to show where you clicked.
-      theMarker = L.marker([lat,lon]).addTo(map).bindPopup(`<input id="title" type="text"/>  <div> <img src="https://i.pinimg.com/originals/43/eb/96/43eb96608de40c2d0bd7fbf387d5df87.jpg" height="150px" width="auto"/> <input id="description" type="text"/>  <p id="longLat">location at ${[(lat).toFixed(3), (lon).toFixed(3)]} </p></div> `);
+      theMarker = L.marker([lat,lon]).addTo(map).bindPopup(`<input id="title" type="text"/>  <div> <img src="https://i.pinimg.com/originals/43/eb/96/43eb96608de40c2d0bd7fbf387d5df87.jpg" height="150px" width="auto"/> <input id="description" type="text"/>  <p id="longLat">location at ${[(lat).toFixed(3), (lon).toFixed(3)]} </p></div> <i class="fa fa-heart"></i> `);
       });
 

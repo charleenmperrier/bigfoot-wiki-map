@@ -28,6 +28,13 @@ header {
   color: black;
 }
 
+#login-head{
+  display: flex;
+  justify-content: space-between;
+  margin-right: 12%;
+}
+
+
 // map layout
 #map {
   flex-direction: column;

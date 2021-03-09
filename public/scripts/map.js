@@ -1,5 +1,5 @@
 // Map Element on page
-let map = L.map('map').setView([47, -101.2996], 5);
+let map = L.map('map').setView([55, -101.2996], 4);
 const attribution = '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>';
 const tileUrl = 'https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=wpKyMC536a0ZlXqAX7iu';
 

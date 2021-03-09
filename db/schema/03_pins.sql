@@ -7,8 +7,8 @@ id SERIAL PRIMARY KEY NOT NULL,
 title VARCHAR(255) NOT NULL,
 description TEXT NOT NULL,
 picture_url TEXT,
-lon FLOAT,
-lat FLOAT,
+lon decimal (18,8),
+lat decimal (18, 8),
 map_id INTEGER REFERENCES maps(id) ON DELETE CASCADE,
 user_id INTEGER REFERENCES users(id) ON DELETE CASCADE
 );

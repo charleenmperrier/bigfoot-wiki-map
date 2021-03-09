@@ -8,26 +8,26 @@ tiles.addTo(map);
 
 getData()
 
-async function getData() {
-  const response = await fetch('api');
-  const data = await response.json();
+// async function getData() {
+//   const response = await fetch('/api/pins');
+//   const data = await response.json();
 
-  for (item of data) {
-    const marker = L.marker([item.lat, item.lon], {
-      // hover description
-      title: "big foot sighting",
-    }).addTo(map);
+//   for (item of data) {
+//     const marker = L.marker([item.lat, item.lon], {
+//       // hover description
+//       title: "big foot sighting",
+//     }).addTo(map);
 
-    const txt = `<h1> ${item.title} </h1> <div> <img src= ${'"'+item.pictureUrl+'"'} height="150px" width="auto"/> <p id="description"> ${item.description} </p> <p id="longLat">location at ${[(item.lat).toFixed(3), (item.lon).toFixed(3)]} </p></div> `;
+//     const txt = `<h1> ${item.title} </h1> <div> <img src= ${'"'+item.pictureUrl+'"'} height="150px" width="auto"/> <p id="description"> ${item.description} </p> <p id="longLat">location at ${[(item.lat).toFixed(3), (item.lon).toFixed(3)]} </p></div> `;
 
-    marker.bindPopup(txt);
-  }
-  console.log(data)
-}
-
-
+//     marker.bindPopup(txt);
+//   }
+//   console.log(data)
+// }
 
 
+
+r
       // // User adding marker and removing marker, popups hardcoded
 
       // let theMarker = {};

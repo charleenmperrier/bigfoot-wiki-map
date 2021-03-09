@@ -1,14 +1,20 @@
+// Map Element on page
 let map = L.map('map').setView([47, -101.2996], 5);
 const attribution = '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>';
 const tileUrl = 'https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=wpKyMC536a0ZlXqAX7iu';
-
 const tiles = L.tileLayer(tileUrl, { attribution });
 tiles.addTo(map);
 
 
 getData()
 
+// Toggle switch of Heart to Red Heart
+function myFunction(x) {
+  x.classList.toggle("fa-fa-heart");
+}
 
+
+// Map Marker, adds data from db to map marker popups
 async function getData() {
   const response = await fetch('/api/pins');
   const data = await response.json();
@@ -19,7 +25,7 @@ async function getData() {
       title: "big foot sighting",
     }).addTo(map);
 
-    let txt = `<h1> ${item.title} </h1> <div> <img src= ${'"'+item.picture_url+'"'} height="150px" width="auto"/> <p id="description"> ${item.description} </p> <p id="longLat">location at ${[(item.lat).toFixed(2), (item.lon).toFixed(2)]} </p></div> <i class="fa fa-heart"></i> `;
+    let txt = `<h1> ${item.title} </h1> <div> <img src= ${'"'+item.picture_url+'"'} height="150px" width="auto"/> <p id="description"> ${item.description} </p> <p id="longLat">location at ${[(item.lat).toFixed(2), (item.lon).toFixed(2)]} </p></div> <i onclick="myFunction(this)" class="fa fa-heart"></i> `;
 
     marker.bindPopup(txt);
   }

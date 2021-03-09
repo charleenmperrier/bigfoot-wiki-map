@@ -55,7 +55,15 @@ app.get("/", (req, res) => {
 
 // Logged in page
 app.get("/login", (req, res) => {
+  // req.session.user_id = req.params.id;
+  // res.redirect('/login');
   res.render("logged-in");
+});
+
+app.get("/logout", (req, res) => {
+  // req.session.user_id = req.params.id;
+  res.redirect('/');
+
 });
 
 app.listen(PORT, () => {

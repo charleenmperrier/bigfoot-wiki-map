@@ -57,23 +57,22 @@ app.use("/api/widgets", widgetsRoutes(db));
 // Separate them into separate routes files (see above).
 app.get("/", (req, res) => {
 
-  const username = req.session.user_id;
-  const templateVars = {username}
-  res.render("index", templateVars);
+
+  res.render("index");
 });
 
-
+app.get("/login", (req,res) => {
+  const username = req.session.user_id;
+  const templateVars = {username}
+  res.render("logged-in", templateVars);
+});
 // Logged in page
 app.post("/login", (req, res) => {
 
-
-
   console.log('req.body: ', req.body)
-
-
     req.session.user_id = req.body.username;
 
-  res.redirect('/')
+  res.redirect('/login')
 });
 
 app.get("/logout", (req, res) => {

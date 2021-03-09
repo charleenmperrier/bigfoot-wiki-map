@@ -52,6 +52,12 @@ app.get("/", (req, res) => {
   res.render("index");
 });
 
+
+// Logged in page
+app.get("/login", (req, res) => {
+  res.render("logged-in");
+});
+
 app.listen(PORT, () => {
   console.log(`Example app listening on port ${PORT}`);
 });

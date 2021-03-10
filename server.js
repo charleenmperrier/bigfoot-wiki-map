@@ -60,10 +60,10 @@ app.use("/maps", mapsRoutes(db));
 // Home page
 // Warning: avoid creating more routes in this file!
 // Separate them into separate routes files (see above).
+// app.get("/", (req, res) => {
+//   res.redirect("maps");
+// });
 app.get("/", (req, res) => {
-  res.redirect("maps");
-});
-app.get("/index", (req, res) => {
   const username = req.session.user_id;
     const templateVars = {username}
   res.render('index', templateVars)
@@ -76,11 +76,11 @@ app.get("/test", (req, res) => {
   res.render("map-constrain", templateVars);
 });
 
-app.get("/login", (req,res) => {
-  const username = req.session.user_id;
-  const templateVars = {username}
-  res.render("logged-in", templateVars);
-});
+// app.get("/login", (req,res) => {
+//   const username = req.session.user_id;
+//   const templateVars = {username}
+//   res.render("logged-in", templateVars);
+// });
 
 
 // Logged in page

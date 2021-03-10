@@ -13,8 +13,7 @@ module.exports = (db) => {
     WHERE name LIKE '%${username}%';`)
     .then(data => {
       if (data.rowCount !== 1) {
-      alert("whoops! username not found :(");
-
+      res.redirect("/error")
       }
       console.log('the query: ', data)
       console.log("row count: ", data.rowCount)
@@ -33,8 +32,6 @@ module.exports = (db) => {
   router.get("/", (req, res) => {
     const username = req.session.user_id;
     const templateVars = {username}
-
-
     res.render("logged-in", templateVars);
   });
 

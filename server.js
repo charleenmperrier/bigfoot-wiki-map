@@ -99,6 +99,10 @@ app.get("/logout", (req, res) => {
 
 });
 
+app.get('/error', (req, res) => {
+  res.render('error')
+})
+
 app.listen(PORT, () => {
   console.log(`Bigfoot is watching you from ${PORT}! 👀`);
 });

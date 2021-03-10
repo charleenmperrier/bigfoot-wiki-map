@@ -44,10 +44,10 @@
     <div id="maps-list">
     <h4>All Maps</h4>
       <ol>
-        <li><a href = "/maps/<%= mapID %>" >Map of Canadian Sightings</a></li>
-        <li>Map o</li>
-        <li>an even cooler map</li>
-        <li>this one is alright i guess</li>
+        <% for (const item of maps) { %>
+          <li><a href = "/maps/<%= item.id  %>" ><%= item.name %></a></li>
+        <%} %>
+
       </ol>
     </div>
 

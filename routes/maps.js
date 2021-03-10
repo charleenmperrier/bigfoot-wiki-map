@@ -17,22 +17,29 @@ module.exports = (db) => {
       });
   });
   router.get("/", (req, res) => {
-    const mapID = 1;
-    const username = req.session.user_id
-    const templateVars = {
-      username,
-      mapID
-    }
-    res.render('maps', templateVars);
+    db.query(`SELECT * FROM maps;`)
+    .then(data => {
+      const username = req.session.user_id
+      const templateVars = {
+        username,
+        maps: data.rows
+      }
+      res.render('maps', templateVars);
+    })
+
   });
+  //new query where map id = id
   router.get("/:id", (req, res) => {
     const username = req.session.user_id
-    const mapID = 1;
-    const templateVars = {
-      username,
-      mapID
-    }
-    res.render("maps_show", templateVars)
+    const mapID = req.params.id;
+    db.query(`SELECT * FROM maps WHERE id = ${mapID}`)
+      .then(data => {
+        const templateVars = {
+          username,
+          mapID
+        }
+        res.render("maps_show", templateVars)
+      })
   })
   return router;
 };

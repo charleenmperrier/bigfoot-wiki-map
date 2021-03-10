@@ -13,7 +13,7 @@ module.exports = (db) => {
     WHERE name LIKE '%${username}%';`)
     .then(data => {
       if (data.rowCount !== 1) {
-      // alert("whoops! username not found :(");
+      alert("whoops! username not found :(");
 
       }
       console.log('the query: ', data)

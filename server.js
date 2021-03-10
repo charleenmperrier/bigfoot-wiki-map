@@ -67,12 +67,21 @@ app.get("/index", (req, res) => {
   res.render('index')
 })
 
-// app.get("/login", (req,res) => {
-//   const username = req.session.user_id;
-//   const templateVars = {username}
-//   res.render("logged-in", templateVars);
-// });
-// // Logged in page
+//testing map constrain page
+app.get("/test", (req, res) => {
+  const username = req.session.user_id;
+  const templateVars = {username}
+  res.render("map-constrain", templateVars);
+});
+
+app.get("/login", (req,res) => {
+  const username = req.session.user_id;
+  const templateVars = {username}
+  res.render("logged-in", templateVars);
+});
+
+
+// Logged in page
 // app.post("/login", (req, res) => {
 
 //   console.log('req.body: ', req.body)

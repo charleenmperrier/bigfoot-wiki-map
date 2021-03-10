@@ -4,10 +4,11 @@ let map = L.map('map', {
   minZoom: 1.5,
   maxZoom: 10,
   // padding: 0,
-}).setView([30, 0], 2);
+
+}).setView([30, 0], 1.5);
 
 // dynamic constraint
-let bounds = map.getBounds().pad(0.3)
+let bounds = map.getBounds().pad(1)
 map.setMaxBounds(bounds);
 
 // console.log(map.getBounds())

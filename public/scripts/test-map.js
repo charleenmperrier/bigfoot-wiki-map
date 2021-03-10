@@ -10,7 +10,7 @@ let map = L.map('map', {
 }).setView([49.85,-122.27], 5);
 
 // dynamic constraint
-let bounds = map.getBounds()
+let bounds = map.getBounds().pad(.3)
 map.setMaxBounds(bounds);
 
 // console.log(map.getBounds())
@@ -32,7 +32,7 @@ function myFunction(x) {
 
 // zoom out on popup
 function zoomOut() {
-    map.flyTo([52,-122.727], 5, {duration: 0.5}).closePopup();
+    map.flyTo([49.85,-122.27], 7, {duration: 0.5}).closePopup();
 }
 
 

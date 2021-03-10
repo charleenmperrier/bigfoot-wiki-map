@@ -1,0 +1,38 @@
+// nav bar with Title and user
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #283618;
+  // padding-top: 10vh;
+  // padding-bottom: 10vh;
+}
+
+
+.title h1 {
+  color: #fefae0;
+  margin-left: 20px;
+}
+
+.sideTitle {
+  display: flex;
+  align-items: center;
+}
+.sideTitle h4 {
+  color: #fefae0;
+  padding-right: 10px;
+}
+.sideTitle button {
+  background-color: #606c38;
+  color: #fefae0;
+  padding: 5px;
+  border-radius: 8px;
+  margin-right: 20px;
+  transition-duration: 0.4s;
+}
+.sideTitle button:hover {
+  background-color: #4CAF50; /* Green */
+  color: white;
+
+}

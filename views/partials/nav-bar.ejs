@@ -1,4 +1,4 @@
-<header>
+
   <nav>
 
       <div class="title">
@@ -11,7 +11,7 @@
           <button type="submit" class="btn btn-primary">USER Login</button>
         </form>
         <% } else { %>
-        <h4><%= username %> </h4>
+        <h4>Logged in as: <%= username %> </h4>
          <form method="GET" action="/logout">
           <button type="submit" class="btn btn-primary">Logout</button>
         </form>
@@ -19,4 +19,4 @@
       </div>
 
   </nav>
-</header>
+

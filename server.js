@@ -56,7 +56,9 @@ app.use("/api/widgets", widgetsRoutes(db));
 // Warning: avoid creating more routes in this file!
 // Separate them into separate routes files (see above).
 app.get("/", (req, res) => {
-  res.render("index");
+  const username = req.session.user_id;
+  const templateVars = {username}
+  res.render("index", templateVars);
 });
 
 app.get("/login", (req,res) => {

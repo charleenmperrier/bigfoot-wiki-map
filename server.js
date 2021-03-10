@@ -49,7 +49,8 @@ const widgetsRoutes = require("./routes/widgets");
 // Note: Feel free to replace the example routes below with your own
 app.use("/api/pins", pinsRoutes(db));
 app.use("/api/users", usersRoutes(db));
-app.use("/api/maps", mapsRoutes(db));
+// app.use("/api/maps", mapsRoutes(db));
+app.use("/maps", mapsRoutes(db));
 app.use("/api/widgets", widgetsRoutes(db));
 // Note: mount other resources here, using the same pattern above
 
@@ -58,10 +59,11 @@ app.use("/api/widgets", widgetsRoutes(db));
 // Warning: avoid creating more routes in this file!
 // Separate them into separate routes files (see above).
 app.get("/", (req, res) => {
-
-
-  res.render("index");
+  res.redirect("maps");
 });
+app.get("/index", (req, res) => {
+  res.render('index')
+})
 
 app.get("/login", (req,res) => {
   const username = req.session.user_id;

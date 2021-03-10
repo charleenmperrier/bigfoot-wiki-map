@@ -1,4 +1,11 @@
 // map layout
+#map-main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
 #map {
   flex-direction: column;
   justify-content: center;
@@ -6,11 +13,20 @@
   height: 500px;
   width: 75%;
   margin: auto;
-  margin-top: 5%;
+  margin-top: 2%;
   padding: auto;
-  margin-bottom: 100px;
+  margin-bottom: 5%;
 }
 
 .fa-fa-heart {
   color: red;
+}
+
+#maps-list{
+  display: flex;
+  flex-direction: column;
+
+  padding-left: 10%;
+  padding-right: 10%;
+  margin-bottom: 10%;
 }

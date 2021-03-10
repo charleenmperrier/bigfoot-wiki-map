@@ -1,22 +1,24 @@
-// Map Element on page
-let southWest = L.latLng(44.715514, -132.714844),
-    northEast = L.latLng(58.263287, -112.719727),
-    bounds = L.latLngBounds(southWest, northEast);
+// // Map Element on page
+// let southWest = L.latLng(47.256864, -128.397217),
+//     northEast = L.latLng(50.854509, -116.828613),
+//     bounds = L.latLngBounds(southWest, northEast);
 
 let map = L.map('map', {
-  minZoom: 5,
+  minZoom: 7,
   maxZoom: 10,
-  maxBounds: bounds,
   padding: 1,
-}).setView([52,-122.727], 5);
+}).setView([49.85,-122.27], 5);
+
+// dynamic constraint
+let bounds = map.getBounds()
+map.setMaxBounds(bounds);
+
+// console.log(map.getBounds())
+
 const attribution = '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>';
 const tileUrl = 'https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=wpKyMC536a0ZlXqAX7iu';
 
 
-
-
-// console.log(map.getBounds().getSouthWest().toString());
-// console.log(map.getBounds().getNorthEast().toString());
 const tiles = L.tileLayer(tileUrl, { attribution });
 tiles.addTo(map);
 
@@ -28,8 +30,9 @@ function myFunction(x) {
   x.classList.toggle("fa-fa-heart");
 }
 
+// zoom out on popup
 function zoomOut() {
-    map.flyTo([52,-122.727], 5, {duration: 0.5});
+    map.flyTo([52,-122.727], 5, {duration: 0.5}).closePopup();
 }
 
 
@@ -37,7 +40,7 @@ function zoomOut() {
 async function getData() {
   const response = await fetch('/api/pins');
   const data = await response.json();
-  console.log(data.pins)
+  // console.log(data.pins)
   for (item of data.pins) {
     const marker = L.marker([item.lat, item.lon], {
       // hover description
@@ -46,16 +49,16 @@ async function getData() {
 
     let txt = `<h1> ${item.title} </h1> <div> <img src= ${'"'+item.picture_url+'"'} height="150px" width="auto"/> <p id="description"> ${item.description} </p> <p id="longLat">location at ${[(item.lat).toFixed(2), (item.lon).toFixed(2)]} </p></div> <i onclick="myFunction(this)" class="fa fa-heart"></i> <button onclick="zoomOut()"> zoom out </button>`;
 
+
+// zoom in on popup
     marker.on('click', function(e){
       map.flyTo([e.latlng.lat, e.latlng.lng], 10, {duration: 0.5});
 
     });
 
-
-
     marker.bindPopup(txt);
   }
-  console.log(data)
+  // console.log(data)
 }
 
 

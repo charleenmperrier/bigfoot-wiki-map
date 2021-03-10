@@ -8,7 +8,7 @@ let map = L.map('map', {
 }).setView([30, 0], 1.5);
 
 // dynamic constraint
-let bounds = map.getBounds().pad(1)
+let bounds = map.getBounds().pad(0.65)
 map.setMaxBounds(bounds);
 
 // console.log(map.getBounds())

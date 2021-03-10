@@ -44,6 +44,7 @@ const pinsRoutes = require("./routes/pins");
 const usersRoutes = require("./routes/users");
 const mapsRoutes = require('./routes/maps');
 const loginRoutes = require('./routes/login')
+const favRoutes = require('./routes/favourites')
 // const widgetsRoutes = require("./routes/widgets");
 
 // Mount all resource routes
@@ -53,6 +54,7 @@ app.use("/api/users", usersRoutes(db));
 // app.use("/api/maps", mapsRoutes(db));
 app.use('/login', loginRoutes(db));
 app.use("/maps", mapsRoutes(db));
+app.use("/favourite", favRoutes(db));
 // app.use("/api/widgets", widgetsRoutes(db));
 // Note: mount other resources here, using the same pattern above
 

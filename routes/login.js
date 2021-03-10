@@ -11,14 +11,8 @@ module.exports = (db) => {
   router.post("/", (req, res) => {
     console.log('req.body: ', req.body)
       req.session.user_id = req.body.username;
-    res.redirect('/login')});
-  // router.get("/logout", (req, res) => {
-  //     // req.session.user_id = req.params.id;
-  //     req.session = null;
-  //     res.redirect('/');
-
-  //   });
-
+    res.redirect('/login')
+  });
   return router;
 };
 

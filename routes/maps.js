@@ -1,6 +1,7 @@
 
 const express = require('express');
 const router  = express.Router();
+const cookieSession = require('cookie-session')
 
 module.exports = (db) => {
   router.get("/api", (req, res) => {
@@ -16,8 +17,23 @@ module.exports = (db) => {
       });
   });
   router.get("/", (req, res) => {
-    res.render('maps');
+    const mapID = 1;
+    const username = req.session.user_id
+    const templateVars = {
+      username,
+      mapID
+    }
+    res.render('maps', templateVars);
   });
+  router.get("/:id", (req, res) => {
+    const username = req.session.user_id
+    const mapID = 1;
+    const templateVars = {
+      username,
+      mapID
+    }
+    res.render("maps_show", templateVars)
+  })
   return router;
 };
 

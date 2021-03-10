@@ -1,15 +1,15 @@
 // Map Element on page
-let map = L.map('map').setView([55, -101.2996], 4);
+
+let map = L.map('map').setView([55, -101.2996], 3);
 const attribution = '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>';
 const tileUrl = 'https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=wpKyMC536a0ZlXqAX7iu';
 
-const tiles = L.tileLayer(tileUrl, { attribution });
+
+const tiles = L.tileLayer(tileUrl, { minZoom: 3, attribution });
 tiles.addTo(map);
 
 
 getData()
-
-
 
 
 // Map Marker, adds data from db to map marker popups
@@ -30,5 +30,6 @@ async function getData() {
   }
   console.log(data)
 }
+
 
 

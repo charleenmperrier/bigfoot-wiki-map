@@ -42,13 +42,18 @@ app.use(cookieSession({
 // Note: Feel free to replace the example routes below with your own
 const pinsRoutes = require("./routes/pins");
 const usersRoutes = require("./routes/users");
-const widgetsRoutes = require("./routes/widgets");
+const mapsRoutes = require('./routes/maps');
+const loginRoutes = require('./routes/login')
+// const widgetsRoutes = require("./routes/widgets");
 
 // Mount all resource routes
 // Note: Feel free to replace the example routes below with your own
 app.use("/api/pins", pinsRoutes(db));
 app.use("/api/users", usersRoutes(db));
-app.use("/api/widgets", widgetsRoutes(db));
+// app.use("/api/maps", mapsRoutes(db));
+app.use('/login', loginRoutes(db));
+app.use("/maps", mapsRoutes(db));
+// app.use("/api/widgets", widgetsRoutes(db));
 // Note: mount other resources here, using the same pattern above
 
 
@@ -56,29 +61,30 @@ app.use("/api/widgets", widgetsRoutes(db));
 // Warning: avoid creating more routes in this file!
 // Separate them into separate routes files (see above).
 app.get("/", (req, res) => {
-
-
-  res.render("index");
+  res.redirect("maps");
 });
+app.get("/index", (req, res) => {
+  res.render('index')
+})
 
-app.get("/login", (req,res) => {
-  const username = req.session.user_id;
-  const templateVars = {username}
-  res.render("logged-in", templateVars);
-});
-// Logged in page
-app.post("/login", (req, res) => {
+// app.get("/login", (req,res) => {
+//   const username = req.session.user_id;
+//   const templateVars = {username}
+//   res.render("logged-in", templateVars);
+// });
+// // Logged in page
+// app.post("/login", (req, res) => {
 
-  console.log('req.body: ', req.body)
-    req.session.user_id = req.body.username;
+//   console.log('req.body: ', req.body)
+//     req.session.user_id = req.body.username;
 
-  res.redirect('/login')
-});
+//   res.redirect('/login')
+// });
 
 app.get("/logout", (req, res) => {
   // req.session.user_id = req.params.id;
   req.session = null;
-  res.redirect('/');
+  res.redirect('maps');
 
 });
 

@@ -1,0 +1,17 @@
+header {
+  display: flex;
+  justify-content: flex-start;
+  color: black;
+  height: 300px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('https://i.pinimg.com/originals/5d/76/7c/5d767c695cc3fd72fead5decbd53e87e.jpg');
+}
+
+#login-head{
+  display: flex;
+  justify-content: space-between;
+  // margin-right: 12%;
+}

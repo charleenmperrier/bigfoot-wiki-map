@@ -61,6 +61,13 @@ app.get("/", (req, res) => {
   res.render("index");
 });
 
+//testing map constrain page
+app.get("/test", (req, res) => {
+  const username = req.session.user_id;
+  const templateVars = {username}
+  res.render("map-constrain", templateVars);
+});
+
 app.get("/login", (req,res) => {
   const username = req.session.user_id;
   const templateVars = {username}

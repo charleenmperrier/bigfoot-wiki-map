@@ -28,6 +28,7 @@ async function getData() {
 
     marker.on('click', function(e){
       map.setView([e.latlng.lat, e.latlng.lng], 10);
+
     });
 
     marker.bindPopup(txt);

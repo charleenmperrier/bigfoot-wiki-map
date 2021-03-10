@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Home Page</title>
+    <title>Welcome!</title>
 
     <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
     <link rel="stylesheet" href="/vendor/border-box.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/nav-bar.css" type="text/css" />
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/map.css" type="text/css" />
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 
     <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
     <script type="text/javascript" src="/scripts/app.js"></script>
@@ -20,23 +27,11 @@
 
 
   <body>
-    <nav>
-      <div class="title">
-        <h1>Big Foot Tracker</h1>
-      </div>
-      <div class="sideTitle">
-         <form method="GET" action="/logout">
-          <span><%= username %> </span>
-          <button type="submit" class="btn btn-primary">Logout</button>
-        </form>
-      </div>
-    </nav>
+      <%- include('partials/nav-bar') %>
 
-    <header id="login-head">
-      <h3>Big Foot sightings</h3>
-      <h4>Favourites List</h4>
-    </header>
+      <header id="login-head">
 
+      </header>
     <!-- map basic test -->
     <h2>Welcome!</h2>
     <h4>All Maps</h4>

@@ -11,7 +11,7 @@ module.exports = (db) => {
   router.post("/", (req, res) => {
     console.log('req.body: ', req.body)
       req.session.user_id = req.body.username;
-    res.redirect('/login')
+    res.redirect('/maps')
   });
   return router;
 };

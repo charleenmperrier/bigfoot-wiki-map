@@ -64,7 +64,9 @@ app.get("/", (req, res) => {
   res.redirect("maps");
 });
 app.get("/index", (req, res) => {
-  res.render('index')
+  const username = req.session.user_id;
+    const templateVars = {username}
+  res.render('index', templateVars)
 })
 
 //testing map constrain page
@@ -98,5 +100,5 @@ app.get("/logout", (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Example app listening on port ${PORT}`);
+  console.log(`Bigfoot is watching you from ${PORT}! 👀`);
 });

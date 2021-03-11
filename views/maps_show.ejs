@@ -70,7 +70,7 @@
 
     // zoom out on popup
     function zoomOut() {
-        map.flyTo([49.85,-122.27], 7, {duration: 0.5}).closePopup();
+        map.flyTo(['<%= lon %>', '<%= lat %>'], 7, {duration: 0.5}).closePopup();
     }
 
 

@@ -32,6 +32,7 @@ app.use("/styles", sass({
   outputStyle: 'expanded'
 }));
 app.use(express.static("public"));
+app.use("/static", express.static("public/images"))
 // app.use(cookieParser())
 app.use(cookieSession({
   name: 'session',

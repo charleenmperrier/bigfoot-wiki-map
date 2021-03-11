@@ -32,8 +32,14 @@
 
     </header>
     <% if (username) { %>
-    <div id="heart"><i onclick="myFunction(this)" class="fa fa-heart"></i> </div>
 
+      <form method="POST" action="/favourite">
+        <input type="submit" value="Fav Map">
+      </form>
+
+      <!-- <form method="POST" action="/favourite" >
+        <div id="heart"><i onclick="myFunction(this)" class="fa fa-heart"></i> </div>
+      </form> -->
     <% } %>
     <!-- map basic test -->
     <!-- pull specific map from template vars (map)  -->

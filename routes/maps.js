@@ -40,6 +40,7 @@ module.exports = (db) => {
           mapID,
           allmaps: data.rows
         }
+        console.log('template: ', templateVars)
         res.render("maps_show", templateVars)
       })
   })

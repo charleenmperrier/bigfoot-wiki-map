@@ -93,13 +93,7 @@ app.get("/test", (req, res) => {
 
 //   res.redirect('/login')
 // });
-// app.post("/favourite", (req, res) => {
-//   console.log('did it')
-//   // const username = req.session.user_id;
 
-//     // console.log("reqqq: ", req.body)
-//     res.redirect('/favourite');
-// });
 
 app.get("/logout", (req, res) => {
   // req.session.user_id = req.params.id;

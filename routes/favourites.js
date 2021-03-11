@@ -29,22 +29,25 @@ module.exports = (db) => {
   });
 
 
-  router.post('/', (req,res) => {
-    // const mapID =
-    const mapID = req.params;
-    console.log("fav add: ", mapID)
-    db.query(`INSERT INTO favourites (user_id, map_id)
-    VALUES (2, 2)
-    RETURNING *
-    ;`)
 
-    .then(data => {
+  router.post('/:mapID', (req,res) => {
+    // const mapID =
+    const mapID = req.params.mapID;
+    const username = req.session.user_id;
+    console.log("fav add: ", mapID)
+    const queryString = `insert into favourites (map_id, user_id) values (${mapID},
+      (select u.id from users u where u.name ='${username}')) RETURNING * ;`
+    console.log('here: ', queryString)
+    db.query(`insert into favourites (map_id, user_id) values (${mapID},
+      (select u.id from users u where u.name ='${username}')) RETURNING * ;`)
+    .then((data) => {
+
       const favMap = data.rows;
       console.log('data fav: ', favMap)
       res.redirect('/favourite')
     })
+    });
 
-  });
 
   router.post('/:id/delete', (req,res) => {
     const mapID = req.params.id
@@ -65,4 +68,6 @@ module.exports = (db) => {
 
   return router;
 };
+
+
 

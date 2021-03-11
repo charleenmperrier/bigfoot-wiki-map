@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/map.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/main.css" type="text/css" />
 
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -36,19 +37,21 @@
 
       <div class="fav-maps">
         <h4>My Fav Maps</h4>
-        <ul>
+        <ul >
           <% for (const item of favs) { %>
-            <tr>
-              <td><li><a href = "/maps/<%= item.map_id  %>" ><%= item.name %></a></li></td>
-              <td><form method="POST" action="/favourite/<%= item.map_id %>/delete"><button type="submit" >Delete</button></form></td>
-          </tr>
+
+              <div class="fav-map-list">
+              <li><a href = "/maps/<%= item.map_id  %>" ><%= item.name %></a></li>
+              <form method="POST" action="/favourite/<%= item.map_id %>/delete"><button class="btn-btn-primary-1" type="submit" >Delete</button></form>
+            </div>
+
           <%} %>
         </ul>
 
       </div>
       <!-- map basic test -->
-      <div id="map"></div>
-      <script src="/scripts/user-map.js"> </script>
+      <!-- <div id="map"></div>
+      <script src="/scripts/user-map.js"> </script> -->
 
     </main>
 

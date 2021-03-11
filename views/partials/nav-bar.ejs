@@ -15,10 +15,10 @@
         <% } else { %>
         <h4>Logged in as: <%= username %> </h4>
         <div class="users">
-          <button onclick="location.href='/favourite'">to users</button>
+          <button class="btn-btn-primary" onclick="location.href='/favourite'">Profile</button>
         </div>
          <form method="GET" action="/logout">
-          <button type="submit" class="btn btn-primary">Logout</button>
+          <button type="submit" class="btn-btn-primary">Logout</button>
         </form>
         <% } %>
       </div>

@@ -31,7 +31,7 @@ module.exports = (db) => {
 
   router.post('/', (req,res) => {
     // const mapID =
-    const mapID = req.params.id;
+    const mapID = req.params;
     console.log("fav add: ", mapID)
     db.query(`INSERT INTO favourites (user_id, map_id)
     VALUES (2, 2)
@@ -40,6 +40,7 @@ module.exports = (db) => {
 
     .then(data => {
       const favMap = data.rows;
+      console.log('data fav: ', favMap)
       res.redirect('/favourite')
     })
 

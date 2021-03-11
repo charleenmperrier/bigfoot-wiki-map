@@ -14,7 +14,7 @@ const images = [
   'http://localhost:8080/static/bigfoot_gardening.jpeg',
   'http://localhost:8080/static/bigfoot_interview.png',
   'http://localhost:8080/static/bigfoot_mask.jpeg',
-  'http://localhost:8080/static/bigfoot_readings.jpeg',
+  'http://localhost:8080/static/bigfoot_reading.jpeg',
   'http://localhost:8080/static/bigfoot_selfie.png',
   'http://localhost:8080/static/bigfoot_snacks.jpeg',
   'http://localhost:8080/static/bigfoot_ukulele.jpeg'

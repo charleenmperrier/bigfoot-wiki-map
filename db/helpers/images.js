@@ -19,7 +19,7 @@
 //   "https://imgur.com/Pkj22q1",
 //   "https://imgur.com/R4tBjnc"
 // ];
-//ask mentor how to get relative paths to images to load in pin-- it puts it in an img src ="path", but these paths are not correct?
+//ask mentor how to get relative paths to images to load in pin-- it puts it in an img src ="path", but these pathes are
 const images = [
   '/db_photos/bigfoot_1.jpeg',
   '/db_photos/bigfoot_2.jpeg',

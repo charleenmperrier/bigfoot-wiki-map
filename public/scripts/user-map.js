@@ -75,33 +75,28 @@ async function getData() {
 
       //Add a marker to show where you clicked.
       theMarker = L.marker([lat,lon]).addTo(map).bindPopup(
-    `<form>
+    `<form action="insert" method="POST">
     <table>
     <tr>
 
       <td>
-        <input type="text" placeholder="Location" name="">
+        <input type="text" placeholder="Location" name="title">
       </td>
     <tr>
-
       <td>
-        <input type="date" date="">
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <input type="text" placeholder="description" name="">
+        <input type="text" placeholder="Description" name="description">
       </td>
     </tr>
       <tr>
       <td>
-        <p id="lonLat">location at ${[(lat).toFixed(3), (lon).toFixed(3)]} </p>
+        <p name="lonLat" value="{[(lat).toFixed(3), (lon).toFixed(3)]}">location at ${[(lat).toFixed(3), (lon).toFixed(3)]} </p>
       </tr>
       </td>
     </tr>
     <tr>
       <td>
-        <input type="Submit" value="Submit" name="">
+        <input type="Submit" value="Add Pin" name="">
+        <input type="Submit" value="Add Map" name="">
         <input type="Submit" value="Delete" name="">
       </td>
     </tr>

@@ -107,6 +107,12 @@ app.get('/error', (req, res) => {
   res.render('error')
 })
 
+// app.post('/pins', (req, res) => {
+//   console.log(req.body);
+//   // console.log("hello")
+//   res.redirect('maps')
+// });
+
 app.listen(PORT, () => {
   console.log(`Bigfoot is watching you from ${PORT}! 👀`);
 });

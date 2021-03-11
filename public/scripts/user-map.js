@@ -74,9 +74,25 @@ async function getData() {
         };
 
       //Add a marker to show where you clicked.
-      theMarker = L.marker([lat,lon]).addTo(map).bindPopup(`<div id="marker-comment"> <input id="title" type="text" placeholder="Location"/> <input id="date" type="text" placeholder="Date"/>  <input id="img_url" type="text" placeholder="URL"/>  <input id="description" type="text" placeholder="Description"/>  <p id="longLat">location at ${[(lat).toFixed(3), (lon).toFixed(3)]} </p></div>  <button type="submit" class="btn btn-primary">save location</button></form> <button type="submit" class="btn btn-primary">delete location</button></form> </div> `).openPopup();
+      theMarker = L.marker([lat,lon]).addTo(map).bindPopup(
+    `<div class="marker-comment">
+      <input id="mapID" type="name" placeholder="Location"/>
+      <input id="name" type="date" placeholder="Date"/>
+      <input id="img" type="text" placeholder="Image URL"/>
+      <input id="description" type="text" placeholder="Description"/>
+      <p id="lonLat">location at ${[(lat).toFixed(3), (lon).toFixed(3)]} </p>
+    </div>
+
+    <div>
+    <button type="submit" class="btn btn-primary">save location</button></form>
+
+    <button type="submit" class="btn btn-primary">delete location</button></form>
+    </div>
+    `).openPopup();
       });
 
 
       // image source format
       // <img src= ${'"'+item.picture_url+'"'} height="150px" width="auto"/>
+
+

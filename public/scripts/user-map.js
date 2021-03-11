@@ -95,7 +95,8 @@ async function getData() {
     </tr>
     <tr>
       <td>
-        <input type="Submit" value="Submit" name="">
+        <input type="Submit" value="Add Pin" name="">
+        <input type="Submit" value="Add Map" name="">
         <input type="Submit" value="Delete" name="">
       </td>
     </tr>

@@ -1,4 +1,5 @@
 const pins = require('./sightings');
+const images = require ('./images')
 require('dotenv').config({path: '../../.env'});
 // console.log(pins.features[0])
 
@@ -28,7 +29,7 @@ const img = (arr) => {
 }
 // map_id and user_id is hardcoded
 const insertPin = (title, description, lon, lat) => new Promise((resolve, reject) => {
-  db.query(`INSERT INTO pins (title, description,lon, lat, map_id, user_id) VALUES ($1, $2, ${lon}, ${lat}, 1, 2)`, [title, description])
+  db.query(`INSERT INTO pins (title, description, picture_url, lon, lat, map_id, user_id) VALUES ($1, $2, $3, ${lon}, ${lat}, 1, 2)`, [title, description, img(images)])
   .then(() => {
     resolve()
   })
@@ -40,6 +41,7 @@ const dataLoop = async function(obj){
     console.log(`adding another item ${index} of ${obj.features.length}!`)
     // console.log(pin.attributes)
     console.log(img(test))
+    // console.log(img(images))
     const {name, descriptio, Lon, Lat} = obj.features[index].attributes
     await insertPin(name, descriptio, Lon, Lat)
   }

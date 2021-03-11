@@ -14,13 +14,10 @@ module.exports = (db) => {
     .then(data => {
       if (data.rowCount !== 1) {
       res.redirect("/error")
+      return
       }
-      console.log('the query: ', data)
-      console.log("row count: ", data.rowCount)
-      console.log(username)
-          req.session.user_id = username
-          const templateVars = {username}
-          res.render('logged-in', templateVars);
+      req.session.user_id = username
+      res.redirect('/maps')
         })
     .catch(err => {
       res

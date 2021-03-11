@@ -5,10 +5,24 @@ module.exports = (db) => {
 
 
   router.get("/", (req, res) => {
-    db.query(`SELECT map_id FROM favourites WHERE user_id = 3;`)
+    const username = req.session.user_id;
+    console.log('fav user: ', username)
+    db.query(`
+    SELECT map_id, maps.name
+    FROM favourites
+    JOIN users ON user_id = users.id
+    JOIN maps ON maps.id = map_id
+    WHERE users.name LIKE '%${username}%';`)
     .then(data => {
-      const users = data.rows;
-      res.json({ users });
+      // const favs = data.rows;
+      const username = req.session.user_id
+          const templateVars = {
+            username,
+            favs: data.rows
+          }
+          console.log('tempV: ', templateVars)
+
+      res.render('logged-in', templateVars)
     })
     .catch(err => {
       res
@@ -20,3 +34,16 @@ module.exports = (db) => {
 
   return router;
 };
+
+// %${username}%
+
+// router.get("/", (req, res) => {
+//   db.query(`SELECT * FROM maps;`)
+//   .then(data => {
+//     const username = req.session.user_id
+//     const templateVars = {
+//       username,
+//       maps: data.rows
+//     }
+//     res.render('maps', templateVars);
+//   })

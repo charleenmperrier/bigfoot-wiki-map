@@ -108,6 +108,57 @@
       // console.log(data)
 
     }
+
+    let theMarker = {};
+
+map.on('click',function(e){
+lat = e.latlng.lat;
+lon = e.latlng.lng;
+
+// //Clears existing marker by placing elsewhere
+if (theMarker !== undefined) {
+        map.removeLayer(theMarker);
+  };
+
+
+
+//Add a marker to show where you clicked.
+theMarker = L.marker([lat,lon]).addTo(map).bindPopup(
+`<form action='/api/pins' method="POST" onSubmit="">
+<table>
+<tr>
+
+<td>
+  <input type="text" placeholder="Title" name="title">
+</td>
+<tr>
+<td>
+  <input type="text" placeholder="Description" name="description">
+  <input type="hidden" value=${lon} name="lon">
+  <input type="hidden" value=${lat} name="lat">
+
+</td>
+</tr>
+<tr>
+
+
+<td>
+  <p name="lonLat" value="{[(lat).toFixed(3), (lon).toFixed(3)]}">Input this in Lat/Lon ${[(lat).toFixed(3), (lon).toFixed(3)]} </p>
+  </tr>
+</tr>
+</td>
+</tr>
+<tr>
+<td>
+  <input type="Submit" value="Add Pin" name="">
+  <input type="Submit" value="Add Map" name="">
+  <input type="Submit" value="Delete" name="">
+</td>
+</tr>
+</table>
+</form>
+`).openPopup();
+});
     </script>
    <% } %>
 

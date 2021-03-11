@@ -73,23 +73,31 @@ async function getData() {
               map.removeLayer(theMarker);
         };
 
+
+
       //Add a marker to show where you clicked.
       theMarker = L.marker([lat,lon]).addTo(map).bindPopup(
-    `<form action="insert" method="POST">
+    `<form action='/api/pins' method="POST" onSubmit="">
     <table>
     <tr>
 
       <td>
-        <input type="text" placeholder="Location" name="title">
+        <input type="text" placeholder="Title" name="title">
       </td>
     <tr>
       <td>
         <input type="text" placeholder="Description" name="description">
+        <input type="hidden" value=${lon} name="lon">
+        <input type="hidden" value=${lat} name="lat">
+
       </td>
     </tr>
       <tr>
+
+
       <td>
-        <p name="lonLat" value="{[(lat).toFixed(3), (lon).toFixed(3)]}">location at ${[(lat).toFixed(3), (lon).toFixed(3)]} </p>
+        <p name="lonLat" value="{[(lat).toFixed(3), (lon).toFixed(3)]}">Input this in Lat/Lon ${[(lat).toFixed(3), (lon).toFixed(3)]} </p>
+        </tr>
       </tr>
       </td>
     </tr>

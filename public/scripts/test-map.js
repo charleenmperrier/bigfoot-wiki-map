@@ -75,6 +75,7 @@ async function getData() {
 
 
 
+
       // // User adding marker and removing marker, popups hardcoded
 
       // let theMarker = {};

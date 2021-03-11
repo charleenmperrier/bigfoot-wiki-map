@@ -2,6 +2,18 @@
 // let southWest = L.latLng(47.256864, -128.397217),
 //     northEast = L.latLng(50.854509, -116.828613),
 //     bounds = L.latLngBounds(southWest, northEast);
+//pull from maps api to map form lat/long
+//f(x) to pull from the database -- like markers
+// will need to push into the links
+getMapData()
+async function getMapData() {
+  const response = await fetch('/maps/api');
+  const data = await response.json();
+  console.log("yo", data.api)
+  for (item of api) {
+    console.log("hello", item)
+    }
+}
 
 let map = L.map('map', {
   minZoom: 7,

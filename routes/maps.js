@@ -34,9 +34,11 @@ module.exports = (db) => {
     const mapID = req.params.id;
     db.query(`SELECT * FROM maps WHERE id = ${mapID}`)
       .then(data => {
+        console.log("map info: ", data.rows)
         const templateVars = {
           username,
-          mapID
+          mapID,
+          allmaps: data.rows
         }
         res.render("maps_show", templateVars)
       })

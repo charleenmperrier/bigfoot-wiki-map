@@ -6,6 +6,12 @@
   align-items: center;
 
 }
+
+.logged-in-maps{
+margin-top: 5%;
+}
+
+
 #map {
   flex-direction: column;
   justify-content: center;
@@ -22,7 +28,7 @@
   color: red;
 }
 
-#marker-comment{
+.marker-comment{
   display:flex;
   flex-direction: column;
 }

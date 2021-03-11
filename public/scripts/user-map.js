@@ -44,7 +44,7 @@ async function getData() {
       title: "big foot sighting",
     }).addTo(map);
 
-    let txt = `<h1> ${item.title} </h1> <div> <img src= ${'"'+item.picture_url+'"'} height="150px" width="auto"/> <p id="description"> ${item.description} </p> <p id="longLat">location at ${[(item.lat).toFixed(2), (item.lon).toFixed(2)]} </p><button onclick="zoomOut()"> zoom out </button> `;
+    let txt = `<h1> ${item.title} </h1> <div> <img src= "${item.picture_url}" height="150px" width="auto"/> <p id="description"> ${item.description} </p> <p id="longLat">location at ${[(item.lat).toFixed(2), (item.lon).toFixed(2)]} </p><button onclick="zoomOut()"> zoom out </button> `;
 
 
 // zoom in on popup
@@ -74,9 +74,54 @@ async function getData() {
         };
 
       //Add a marker to show where you clicked.
-      theMarker = L.marker([lat,lon]).addTo(map).bindPopup(`<div id="marker-comment"> <input id="title" type="text" placeholder="Location"/> <input id="date" type="text" placeholder="Date"/>  <input id="img_url" type="text" placeholder="URL"/>  <input id="description" type="text" placeholder="Description"/>  <p id="longLat">location at ${[(lat).toFixed(3), (lon).toFixed(3)]} </p></div>  <button type="submit" class="btn btn-primary">save location</button></form> <button type="submit" class="btn btn-primary">delete location</button></form> </div> `).openPopup();
+      theMarker = L.marker([lat,lon]).addTo(map).bindPopup(
+    `<form action="insert" method="POST">
+    <table>
+    <tr>
+
+      <td>
+        <input type="text" placeholder="Location" name="title">
+      </td>
+    <tr>
+      <td>
+        <input type="text" placeholder="Description" name="description">
+      </td>
+    </tr>
+      <tr>
+      <td>
+        <p name="lonLat" value="{[(lat).toFixed(3), (lon).toFixed(3)]}">location at ${[(lat).toFixed(3), (lon).toFixed(3)]} </p>
+      </tr>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <input type="Submit" value="Add Pin" name="">
+        <input type="Submit" value="Add Map" name="">
+        <input type="Submit" value="Delete" name="">
+      </td>
+    </tr>
+    </table>
+  </form>
+    `).openPopup();
       });
 
 
+
+      //old backup code
       // image source format
       // <img src= ${'"'+item.picture_url+'"'} height="150px" width="auto"/>
+
+
+    //   <div class="marker-comment">
+    //   <input id="mapID" type="name" placeholder="Location"/>
+    //   <input id="name" type="date" placeholder="Date"/>
+
+    //   <input id="description" type="text" placeholder="Description"/>
+    //   <p id="lonLat">location at ${[(lat).toFixed(3), (lon).toFixed(3)]} </p>
+    // </div>
+
+    // <div>
+    // <button type="submit" class="btn btn-primary">save location</button></form>
+
+    // <button type="submit" class="btn btn-primary">delete location</button></form>
+    // </div>

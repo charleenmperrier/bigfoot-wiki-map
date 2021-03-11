@@ -85,12 +85,17 @@
 - figure out a way to create different maps by grouping? then route them into the maps list
 - figure out a routes to insert/post data from markers into data base
 
+# Kevin's personal notes
+- ask if marker inputs are written properly
+- when corrected have it post into db, also ask team what criteria is to be included in marker data
+-
+
 # features missing
 
 [x]  users can see a list of the available maps
 [x]  users can view a map
 [x]  a map can contain many points
-[]  each point can have: a title, description, and image -> MISSING image
+[?]  each point can have: a title, description, and image -> MISSING image
 []  authenticated users can create maps -> MISSING can click, but no creation into db
 []  authenticated users can modify maps (add, edit, remove points) -> MISSING
 []  users can favourite a map -MISSING

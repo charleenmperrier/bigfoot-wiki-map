@@ -23,9 +23,9 @@ tiles.addTo(map);
 getData()
 
 // Toggle switch of Heart to Red Heart
-function myFunction(x) {
-  x.classList.toggle("fa-fa-heart");
-}
+// function myFunction(x) {
+//   x.classList.toggle("fa-fa-heart");
+// }
 
 // zoom out on popup
 function zoomOut() {
@@ -44,7 +44,7 @@ async function getData() {
       title: "big foot sighting",
     }).addTo(map);
 
-    let txt = `<h1> ${item.title} </h1> <div> <img src= ${'"'+item.picture_url+'"'} height="150px" width="auto"/> <p id="description"> ${item.description} </p> <p id="longLat">location at ${[(item.lat).toFixed(2), (item.lon).toFixed(2)]} </p></div> <i onclick="myFunction(this)" class="fa fa-heart"></i> <button onclick="zoomOut()"> zoom out to world</button>`;
+    let txt = `<h1> ${item.title} </h1> <div> <img src= ${'"'+item.picture_url+'"'} height="150px" width="auto"/> <p id="description"> ${item.description} </p> <p id="longLat">location at ${[(item.lat).toFixed(2), (item.lon).toFixed(2)]} </p></div> <i onclick="myFunction(this)" `;
 
 
 // zoom in on popup

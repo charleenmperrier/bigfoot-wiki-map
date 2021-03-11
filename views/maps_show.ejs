@@ -29,17 +29,22 @@
     <%- include('partials/nav-bar') %>
 
     <header id="login-head">
-
     </header>
-    <% if (username) { %>
-    <div id="heart"><i onclick="myFunction(this)" class="fa fa-heart"></i> </div>
 
-    <% } %>
-    <!-- map basic test -->
-    <!-- pull specific map from template vars (map)  -->
     <% for (const indv of allmaps) { %>
       <% const lon = indv.lon %>
       <% const lat = indv.lat %>
+      <% const name = indv.name %>
+
+    <div class="heart-map-title">
+    <div class="page-titles"><h1><%= name %></h1></div>
+    <% if (username) { %>
+    <div id="heart"><i onclick="myFunction(this)" class="fa fa-heart"></i> </div>
+    </div>
+
+    <% } %>
+
+    <!-- pull specific map from template vars (map)  -->
 
 
     <div id="map"></div>

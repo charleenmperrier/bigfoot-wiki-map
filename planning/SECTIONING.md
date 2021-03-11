@@ -90,7 +90,7 @@
 [x]  users can see a list of the available maps
 [x]  users can view a map
 [x]  a map can contain many points
-[]  each point can have: a title, description, and image -> MISSING image
+[?]  each point can have: a title, description, and image -> MISSING image
 []  authenticated users can create maps -> MISSING can click, but no creation into db
 []  authenticated users can modify maps (add, edit, remove points) -> MISSING
 []  users can favourite a map -MISSING

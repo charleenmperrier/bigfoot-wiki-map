@@ -24,6 +24,20 @@ body {
   margin-bottom: 10%;
 }
 
+
+
+
+.users-table{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: rgba(157, 199, 149, 0.308);
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+
 .heart-map-title{
   display: flex;
   flex-direction: row;
@@ -41,17 +55,3 @@ body {
   padding-right: 10%;
 
 }
-
-
-
-.users-table{
-  display:flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
-  background-color: rgba(157, 199, 149, 0.308);
-  padding-left: 10%;
-  padding-right: 10%;
-}
-
-

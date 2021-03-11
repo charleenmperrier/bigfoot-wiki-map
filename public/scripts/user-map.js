@@ -78,7 +78,7 @@ async function getData() {
     `<div class="marker-comment">
       <input id="mapID" type="name" placeholder="Location"/>
       <input id="name" type="date" placeholder="Date"/>
-      <input id="img" type="text" placeholder="Image URL"/>
+
       <input id="description" type="text" placeholder="Description"/>
       <p id="lonLat">location at ${[(lat).toFixed(3), (lon).toFixed(3)]} </p>
     </div>

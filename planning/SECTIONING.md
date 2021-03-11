@@ -85,6 +85,11 @@
 - figure out a way to create different maps by grouping? then route them into the maps list
 - figure out a routes to insert/post data from markers into data base
 
+# Kevin's personal notes
+- ask if marker inputs are written properly
+- when corrected have it post into db, also ask team what criteria is to be included in marker data
+-
+
 # features missing
 
 [x]  users can see a list of the available maps

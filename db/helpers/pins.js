@@ -21,6 +21,11 @@ db.connect();
 //future-- randomize across all three maps for each pin
 // same for users
 
+const test = ['🌈', '🔫', '🏞', '🍉', 'bigfoot', 'sasquatch', '💃🏻']
+const img = (arr) => {
+  let random = Math.floor(Math.random() * arr.length)
+  return arr[random]
+}
 // map_id and user_id is hardcoded
 const insertPin = (title, description, lon, lat) => new Promise((resolve, reject) => {
   db.query(`INSERT INTO pins (title, description,lon, lat, map_id, user_id) VALUES ($1, $2, ${lon}, ${lat}, 1, 2)`, [title, description])
@@ -34,6 +39,7 @@ const dataLoop = async function(obj){
   for (let index in obj.features) {
     console.log(`adding another item ${index} of ${obj.features.length}!`)
     // console.log(pin.attributes)
+    console.log(img(test))
     const {name, descriptio, Lon, Lat} = obj.features[index].attributes
     await insertPin(name, descriptio, Lon, Lat)
   }

@@ -67,14 +67,11 @@
 - ruh roh its presentation day D:
 
 
-
 # Indepth Backend
 - Connecting google.maps api
 - Create post/gets for user
 - Create sql for user inserted data -> image, location, description
 - 
-
-
 
 # Indepth Frontend
 - Nav bar Header-> Title, user/login
@@ -82,6 +79,20 @@
 - Body -> Map image, Map location name, map heart
 
 
-# Kevin's Monday - Tuesday notes
-- add path for like button to push into a favourites list
-- research method of submitting/ deleting personal marker data
+
+
+# Wednesday notes
+- figure out a way to create different maps by grouping? then route them into the maps list
+- figure out a routes to insert/post data from markers into data base
+
+# features missing
+
+[]  users can see a list of the available maps -> Unable to create maps
+[x]  users can view a map
+[x]  a map can contain many points
+[]  each point can have: a title, description, and image -> MISSING image
+[]  authenticated users can create maps -> MISSING can click, but no creation into db
+[]  authenticated users can modify maps (add, edit, remove points) -> MISSING
+[]  users can favourite a map -MISSING
+[]  users have profiles, indicating their favourite maps and maps they've contributed to -> MISSING profile? no favourites maps/ user maps
+[x]  use http://leafletjs.com/ or https://developers.google.com/maps/

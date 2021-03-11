@@ -1,5 +1,5 @@
 -- example seeds for maps table
 
 INSERT INTO maps (name, lon, lat, user_id)
-VALUES ('British Columbia', 50, -123.100, 1),
-('Ontario', 51.25, -85.32, 1), ('California',36.77, -119.41, 2);
+VALUES ('Lower Mainland & Vancouver Island', 50, -123.100, 1),
+('Ottawa', 45.4239, -75.7009, 1), ('St. Augustine, Florida', 29.84, -81.23, 2);

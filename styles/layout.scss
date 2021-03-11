@@ -16,6 +16,7 @@ body {
 #maps-list{
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   background-color: rgba(157, 199, 149, 0.308);
 
   padding-left: 10%;
@@ -25,7 +26,13 @@ body {
 
 
 
-
+#heart {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-top: 5%;
+  font-size: 2em;
+  margin-right: 10%;
+}
 
 
 

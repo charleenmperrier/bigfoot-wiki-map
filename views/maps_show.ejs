@@ -31,12 +31,16 @@
     <header id="login-head">
 
     </header>
+    <% if (username) { %>
+    <div id="heart"><i onclick="myFunction(this)" class="fa fa-heart"></i> </div>
 
+    <% } %>
     <!-- map basic test -->
     <!-- pull specific map from template vars (map)  -->
     <% for (const indv of allmaps) { %>
       <% const lon = indv.lon %>
       <% const lat = indv.lat %>
+
 
     <div id="map"></div>
     <script>
@@ -64,9 +68,9 @@
     getData()
 
     // Toggle switch of Heart to Red Heart
-    function myFunction(x) {
-      x.classList.toggle("fa-fa-heart");
-    }
+    // function myFunction(x) {
+    //   x.classList.toggle("fa-fa-heart");
+    // }
 
     // zoom out on popup
     function zoomOut() {
@@ -85,7 +89,7 @@
           title: "big foot sighting",
         }).addTo(map);
 
-        let txt = `<h1> ${item.title} </h1> <div> <img src= ${'"'+item.picture_url+'"'} height="150px" width="auto"/> <p id="description"> ${item.description} </p> <p id="longLat">location at ${[(item.lat).toFixed(2), (item.lon).toFixed(2)]} </p></div> <i onclick="myFunction(this)" class="fa fa-heart"></i> <button onclick="zoomOut()"> zoom out </button>`;
+        let txt = `<h1> ${item.title} </h1> <div> <img src= ${'"'+item.picture_url+'"'} height="150px" width="auto"/> <p id="description"> ${item.description} </p> <p id="longLat">location at ${[(item.lat).toFixed(2), (item.lon).toFixed(2)]} </p></div> <button onclick="zoomOut()"> zoom out </button>`;
 
 
     // zoom in on popup
@@ -102,7 +106,13 @@
     </script>
    <% } %>
 
-  </body>
+
+<script> // Toggle switch of Heart to Red Heart
+  function myFunction(x) {
+    x.classList.toggle("fa-fa-heart");
+  }</script>
+
+</body>
 </html>
 
 

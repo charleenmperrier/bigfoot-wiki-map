@@ -1,11 +1,11 @@
 // Map Element on page
 
 let map = L.map('map', {
-  minZoom: 1.5,
+  minZoom: 2,
   maxZoom: 10,
-  // padding: 0,
+  worldCopyJump: true,
 
-}).setView([30, 0], 1.5);
+}).setView([30, 0], 2);
 
 // dynamic constraint
 let bounds = map.getBounds().pad(0.65)

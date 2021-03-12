@@ -82,8 +82,8 @@
 
               <div class="fav-map-list">
 
-              <li><a href = "/maps/<%= ele.id  %>" ><%= ele.name %></a></li>
-
+              <li><a href = "/maps/<%= ele.id  %>/delete" ><%= ele.name %></a></li>
+              <form method="POST" action="/maps/<%= ele.id %>/delete"><button class="btn-btn-primary-1" type="submit" >Delete</button></form>
             </div>
 
           <%} %>

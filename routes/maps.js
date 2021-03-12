@@ -28,20 +28,20 @@ module.exports = (db) => {
     })
   });
 
-  router.get("/dfgdf", (req, res) => {
-    const username = req.session.user_id
-    // console.log('my Maps: ', `SELECT id FROM maps WHERE user_id = ${username}`)
-    db.query(`SELECT id
-    FROM maps
-    WHERE user_id = ${username}`)
-    .then(data => {
-      console.log('my data: ', data.rows)
-      const templateVars = {
-        myMaps: data.rows
-      }
-      res.render('logged-in', templateVars)
-    });
-  });
+  // router.get("/dfgdf", (req, res) => {
+  //   const username = req.session.user_id
+  //   // console.log('my Maps: ', `SELECT id FROM maps WHERE user_id = ${username}`)
+  //   db.query(`SELECT id
+  //   FROM maps
+  //   WHERE user_id = ${username}`)
+  //   .then(data => {
+  //     console.log('my data: ', data.rows)
+  //     const templateVars = {
+  //       myMaps: data.rows
+  //     }
+  //     res.render('logged-in', templateVars)
+  //   });
+  // });
 
   //new query where map id = id
   router.get("/:id", (req, res) => {
@@ -72,6 +72,23 @@ module.exports = (db) => {
     .then (data => {
       res.redirect('/maps')
     });
+  });
+
+  router.post('/:id/delete', (req,res) => {
+    const mapID = req.params.id
+    console.log('mapID delete: ', mapID)
+    db.query(`
+    DELETE
+    FROM maps
+    WHERE id = ${mapID}
+    ;
+    `)
+
+    .then(data => {
+      const favMap = data.rows;
+      res.redirect('/favourite')
+    })
+
   });
   return router;
 };

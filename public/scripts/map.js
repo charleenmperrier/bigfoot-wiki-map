@@ -50,7 +50,13 @@ async function getData() {
 // zoom in on popup
     marker.on('click', function(e){
       map.flyTo([e.latlng.lat, e.latlng.lng], 5, {duration: 0.5});
+    });
 
+    // set popup in center
+    map.on('popupopen', function(e) {
+      var px = map.project(e.target._popup._latlng);
+      px.y -= e.target._popup._container.clientHeight/2;
+      map.panTo(map.unproject(px),{animate: true});
     });
 
     marker.bindPopup(txt);

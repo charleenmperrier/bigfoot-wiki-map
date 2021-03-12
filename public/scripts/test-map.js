@@ -31,10 +31,6 @@ tiles.addTo(map);
 
 getData();
 
-// // Toggle switch of Heart to Red Heart
-// function myFunction(x) {
-//   x.classList.toggle("fa-fa-heart");
-// }
 
 // zoom out on popup
 function zoomOut() {
@@ -46,7 +42,7 @@ function zoomOut() {
 async function getData() {
   const response = await fetch('/api/pins');
   const data = await response.json();
-  // console.log(data.pins)
+
   for (item of data.pins) {
     const marker = L.marker([item.lat, item.lon], {
       // hover description

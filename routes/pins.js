@@ -9,15 +9,15 @@ module.exports = (db) => {
     db.query(`SELECT *
     FROM pins
     ;`)
-    .then(data => {
-      const pins = data.rows;
-      res.json({ pins });
-    })
-    .catch(err => {
-      res
-        .status(500)
-        .json({ error: err.message });
-    });
+      .then(data => {
+        const pins = data.rows;
+        res.json({ pins });
+      })
+      .catch(err => {
+        res
+          .status(500)
+          .json({ error: err.message });
+      });
   });
 
 
@@ -29,14 +29,14 @@ module.exports = (db) => {
     VALUES ('${req.body.title}','${req.body.description}', '${img(images)}',${req.body.lon}, ${req.body.lat})
     RETURNING *
     ;`)
-    .then(data => {
-      res.redirect('/favourite')
-    })
-    .catch(err => {
-      res
-        .status(500)
-        .json({ error: err.message });
-    });
+      .then(data => {
+        res.redirect('/favourite')
+      })
+      .catch(err => {
+        res
+          .status(500)
+          .json({ error: err.message });
+      });
   });
 
 
@@ -48,14 +48,14 @@ module.exports = (db) => {
     FROM pins
     WHERE id = ${req.params.id}
     ;`)
-    .then(data => {
-      res.redirect('/favourite')
-    })
-    .catch(err => {
-      res
-        .status(500)
-        .json({ error: err.message });
-    });
+      .then(data => {
+        res.redirect('/favourite')
+      })
+      .catch(err => {
+        res
+          .status(500)
+          .json({ error: err.message });
+      });
   })
 
 

@@ -34,16 +34,16 @@ module.exports = (db) => {
     // const mapID =
     const mapID = req.params.mapID;
     const username = req.session.user_id;
-    console.log("fav add: ", mapID)
-    const queryString = `insert into favourites (map_id, user_id) values (${mapID},
-      (select u.id from users u where u.name ='${username}')) RETURNING * ;`
-    console.log('here: ', queryString)
+    // console.log("fav add: ", mapID)
+    // const queryString = `insert into favourites (map_id, user_id) values (${mapID},
+    //   (select u.id from users u where u.name ='${username}')) RETURNING * ;`
+    // console.log('here: ', queryString)
     db.query(`insert into favourites (map_id, user_id) values (${mapID},
       (select u.id from users u where u.name ='${username}')) RETURNING * ;`)
     .then((data) => {
 
       const favMap = data.rows;
-      console.log('data fav: ', favMap)
+      // console.log('data fav: ', favMap)
       res.redirect('/favourite')
     })
     });
@@ -51,7 +51,7 @@ module.exports = (db) => {
 
   router.post('/:id/delete', (req,res) => {
     const mapID = req.params.id
-    console.log('mapID delete: ', mapID)
+    // console.log('mapID delete: ', mapID)
     db.query(`
     DELETE
     FROM favourites

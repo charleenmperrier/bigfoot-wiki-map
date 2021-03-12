@@ -44,9 +44,25 @@ module.exports = (db) => {
         res.render("maps_show", templateVars)
       })
   })
+
+
+  router.post("/", (req, res) => {
+    const username = req.session.user_id
+    console.log('map post: ', req.body)
+    db.query(`
+    INSERT INTO maps (name, lon, lat, user_id)
+    VALUES ('${req.body.title}', ${req.body.lon}, ${req.body.lat},
+    (SELECT id FROM users WHERE name = '${username}'))
+    `)
+    .then (data => {
+      res.redirect('/maps')
+    });
+  });
   return router;
 };
 
+// (`insert into favourites (map_id, user_id) values (${mapID},
+//   (select u.id from users u where u.name ='${username}')) RETURNING * ;`)
 
 // pass map_id in get request
 // make many RQs at one- call backend, get all lat/longs as map id, and then pass stuff to leaflet then redner

@@ -4,10 +4,12 @@ nav {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-color: #283618;
+  background-image: linear-gradient( rgba(40, 54, 24,0.5), rgba(128, 102, 65, 0.171));
+  // background-color: #283618;
   // padding-top: 10vh;
   // padding-bottom: 10vh;
 }
+
 
 
 .title button {

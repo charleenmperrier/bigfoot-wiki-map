@@ -13,17 +13,46 @@
   flex-direction: column;
   width: 100%;
 }
+
 .page-titles {
   display: flex;
   padding-top: 2%;
   padding-left: 10%;
+  padding-right: 10%;
   padding-bottom: 2%;
 }
 
+.page-titles::after{
+  content: "";
+  background-image: linear-gradient( rgba(255,0,0,1), rgba(255,0,0,0));
+  opacity: 0.1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 40%;
+  z-index: -1;
+}
+
+
 body {
   background-color: #606c38;
-
 }
+
+
+// image background of seamless jungle
+body::after{
+  content:"";
+  background-image: url("https://www.emanueleferonato.com/wp-content/uploads/2011/07/genetica10.jpg");
+  opacity: 0.1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+
 
 #map-creation-stuff{
   display: flex;
@@ -36,8 +65,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: rgba(157, 199, 149, 0.308);
-
+  align-items: center;
+  background-color: rgba(157, 199, 149, 0.4);
   padding-left: 10%;
   padding-right: 10%;
   margin-bottom: 10%;
@@ -49,8 +78,7 @@ body {
   flex-direction: row;
   justify-content: space-evenly;
   align-items: flex-start;
-  background-color: rgba(157, 199, 149, 0.308);
-
+  background-color: rgba(157, 199, 149, 0.4);
   border-radius: 10px;
 }
 
@@ -97,8 +125,10 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  // padding-left: 10%;
-  padding-right: 30%;
+  padding: 5%;
+  background-color: rgba(214, 253, 142, 0.349);
+  border-radius: 10px;
+  margin-right: 30%;
 }
 
 #creation-submit{
@@ -123,10 +153,27 @@ body {
   padding-right: 3%;
 }
 
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: smaller;
+  margin-top: 10%;
+  margin-left: 5%;
+  margin-right: 5%
+}
+
 @media only screen and (max-width: 1024px) {
   .logged-in-maps {
     display: flex;
     flex-direction: column;
+  }
+
+  .page-titles{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .users-table{

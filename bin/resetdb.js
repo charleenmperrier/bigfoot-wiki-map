@@ -47,5 +47,6 @@ try {
   client.end();
 };
 
+//loads pins
 
 dataLoop(pins);

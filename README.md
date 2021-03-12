@@ -11,20 +11,24 @@ If you have seen Bigfoot in an entirely different area than our default maps pro
 This map was made as a midterm project for the [Lighthouse Labs Web Development Bootcamp](https://lighthouselabs.ca), and was created by Charlee Perrier (@charleenmperrier), Kevin Liao (@Kevinliao0857), and Molly Trepanier (@mollyet).
 
 ## Screenshots
-Here are some screen shots. 
-
+The Home Page
+!["Screenshot of the Homepage"](https://github.com/charleenmperrier/bigfoot-wiki-map/blob/f2bf1e290124f5874906854ac2b00a3300ae5294/docs/bigfoot-home.png)
+Bob's User Profile 
+!["Screenshot of Bob's Profile"](https://github.com/charleenmperrier/bigfoot-wiki-map/blob/f2bf1e290124f5874906854ac2b00a3300ae5294/docs/bigfoot-user.png)
+Map of Lower Mainland and Vancouver Island
+!['Screenshot of an Individual Map"](https://github.com/charleenmperrier/bigfoot-wiki-map/blob/master/docs/bigfoot-van-vanisle.png)
 ## Setup
 
 - Clone this repo into your favourite directory 
 - In the command line, run `npm install` to install all dependencies
-- Run `npm run database` to load the databases
-- Run `npm run local` to start the server-- don't worry, our friendly (no)Demon will keep the server running through any changes. If you want to view the inner workings of the server, watch the terminal and Morgan will tell you all of our sercrets.
+- Run `npm run database` to load the databases and once the pins are loaded, `ctl + c` to exit the script. 
+- Run `npm run local` to start the server
 - In your browser, visit `localhost:8080` 
 - Have fun, and tell us if you find Bigfoot!
 
 ## Dependancies 
 - Node 10.20.x or above
-- NPM (Noodle Package Manager)
+- NPM 
 - Postgres/ PG
 - Express.js
 - Leaflet.js

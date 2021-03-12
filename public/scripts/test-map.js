@@ -1,10 +1,4 @@
-// // Map Element on page
-// let southWest = L.latLng(47.256864, -128.397217),
-//     northEast = L.latLng(50.854509, -116.828613),
-//     bounds = L.latLngBounds(southWest, northEast);
-//pull from maps api to map form lat/long
-//f(x) to pull from the database -- like markers
-// will need to push into the links
+
 getMapData()
 async function getMapData() {
   const response = await fetch('/maps/api');
@@ -73,42 +67,3 @@ async function getData() {
 
 }
 
-
-
-
-      // // User adding marker and removing marker, popups hardcoded
-
-      // let theMarker = {};
-
-      // map.on('click',function(e){
-      // lat = e.latlng.lat;
-      // lon = e.latlng.lng;
-
-      // // //Clears existing marker by placing elsewhere
-      // if (theMarker !== undefined) {
-      //         map.removeLayer(theMarker);
-      //   };
-
-      // //Add a marker to show where you clicked.
-      // theMarker = L.marker([lat,lon]).addTo(map).bindPopup(`<input id="title" type="text"/>  <div> <img src="https://i.pinimg.com/originals/43/eb/96/43eb96608de40c2d0bd7fbf387d5df87.jpg" height="150px" width="auto"/> <input id="description" type="text"/>  <p id="longLat">location at ${[(lat).toFixed(3), (lon).toFixed(3)]} </p></div>  <button type="submit" class="btn btn-primary">submit</button></form>`);
-      // });
-
-
-
-     // // Calculate distance between two points in google maps V3
-
-      // var rad = function(x) {
-      //   return x * Math.PI / 180;
-      // };
-
-      // var getDistance = function(p1, p2) {
-      //   var R = 6378137; // Earth’s mean radius in meter
-      //   var dLat = rad(p2.lat() - p1.lat());
-      //   var dLong = rad(p2.lng() - p1.lng());
-      //   var a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
-      //     Math.cos(rad(p1.lat())) * Math.cos(rad(p2.lat())) *
-      //     Math.sin(dLong / 2) * Math.sin(dLong / 2);
-      //   var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-      //   var d = R * c;
-      //   return d; // returns the distance in meter
-      // };

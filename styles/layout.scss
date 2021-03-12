@@ -76,7 +76,7 @@ body {
 .new-map{
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   margin-bottom: 10%;
 }
 
@@ -90,4 +90,28 @@ body {
 
 .fav-maps ul{
   padding-left: 0px;
+}
+
+#new-map-tables{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  // padding-left: 10%;
+  padding-right: 30%;
+}
+
+#creation-submit{
+  background-color: #283618;
+  color: #fefae0;
+  padding: 5px;
+  border-radius: 8px;
+  transition-duration: 0.4s;
+  width: 100px;
+  margin-left: 2rem;
+}
+
+#creation-submit:hover {
+  background-color: #4CAF50; /* Green */
+  color: white;
+
 }

@@ -1,5 +1,18 @@
 // See: https://sass-lang.com/
 
+
+.logged-in-maps{
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 2%;
+}
+
+#map-with-title{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
 .page-titles {
   display: flex;
   padding-top: 2%;
@@ -12,6 +25,12 @@ body {
 
 }
 
+#map-creation-stuff{
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin-right: 8%;
+}
 
 #maps-list{
   display: flex;
@@ -25,16 +44,14 @@ body {
 }
 
 
-
-
 .users-table{
   display:flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: flex-start;
   background-color: rgba(157, 199, 149, 0.308);
-  padding-left: 10%;
-  padding-right: 10%;
+  // padding-left: 10%;
+  // padding-right: 10%;
 }
 
 
@@ -54,4 +71,23 @@ body {
   // font-size: 2em;
   padding-right: 10%;
 
+}
+
+.new-map{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 10%;
+}
+
+#fav-map-list {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fav-maps ul{
+  padding-left: 0px;
 }

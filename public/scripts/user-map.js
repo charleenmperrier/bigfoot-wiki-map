@@ -44,7 +44,9 @@ async function getData() {
       title: "big foot sighting",
     }).addTo(map);
 
-    let txt = `<h1> ${item.title} </h1> <div> <img src= "${item.picture_url}" height="150px" width="auto"/> <p id="description"> ${item.description} </p> <p id="longLat">location at ${[(item.lat).toFixed(2), (item.lon).toFixed(2)]} </p><button onclick="zoomOut()"> zoom out </button> <form action="/pins/:id/delete" method="POST">
+    let txt = `<h1> ${item.title} </h1> <div> <img src= "${item.picture_url}" height="150px" width="auto"/> <p id="description"> ${item.description} </p> <p id="longLat">location at ${[(item.lat).toFixed(2), (item.lon).toFixed(2)]} </p><button onclick="zoomOut()"> zoom out </button>
+
+    <form action='http://localhost:8080/api/pins/${item.id}/delete' method="POST">
     <input type="Submit" value="Delete" name="">
     </form>  `;
 

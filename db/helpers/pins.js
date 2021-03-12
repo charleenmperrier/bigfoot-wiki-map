@@ -24,7 +24,7 @@ const insertPin = (title, description, lon, lat) => new Promise((resolve, reject
 
 const dataLoop = async function(obj){
   for (let index in obj.features) {
-    // console.log(`adding pin ${Number(index) +1} of ${obj.features.length}!`)
+    console.log(`adding pin ${Number(index) +1} of ${obj.features.length}!`)
     const {name, descriptio, Lon, Lat} = obj.features[index].attributes;
     await insertPin(name, descriptio, Lon, Lat);
   }

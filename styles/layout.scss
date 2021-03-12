@@ -97,10 +97,8 @@ body::after{
 
 #heart {
   display: flex;
-  // flex-direction: row-reverse;
   padding-top: 5%;
   padding-bottom: 5%;
-  // font-size: 2em;
   padding-right: 10%;
 
 }
@@ -121,10 +119,6 @@ body::after{
   align-items: center;
 }
 
-
-// .fav-maps ul{
-//   padding-left: 4%;
-// }
 
 #new-map-tables{
   display: flex;
@@ -147,7 +141,7 @@ body::after{
 }
 
 #creation-submit:hover {
-  background-color: #4CAF50; /* Green */
+  background-color: #4CAF50;
   color: white;
 
 }
@@ -167,8 +161,6 @@ body::after{
   margin-left: 5%;
   margin-right: 5%
 }
-
-
 
 
 

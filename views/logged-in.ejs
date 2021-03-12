@@ -28,84 +28,60 @@
 
   <body>
     <%- include('partials/nav-bar') %>
-
     <header id="login-head">
-
     </header>
+      <main class="logged-in-maps">
+        <div id="map-with-title">
+        <div class="page-titles"><h1>Profile Page</h1></div>
+        <div id="map"></div>
+        </div>
+        <div id="map-creation-stuff">
+        <div class="new-map">
+          <form id="new-map-tables" method="POST" action="/maps">
+            <h4>Create New Map</h4>
+            <label for="title">Map Title:</label>
+            <input type="text" id="title" name="title"><br><br>
+            <label for="lon">Longitude:</label>
+            <input type="text" id="lon" name="lon"><br><br>
+            <label for="lat">Latitude:</label>
+            <input type="text" id="lat" name="lat"><br><br>
+            <input id="creation-submit" type="submit" value="Submit">
+          </form>
+        </div>
+        <div class="users-table">
+              <div class="fav-maps">
+          <h4>My Fav Maps</h4>
+          <ul >
+            <% for (const item of favs) { %>
+                <div id="fav-map-list">
+                <li><a href = "/maps/<%= item.map_id  %>" ><%= item.name %></a></li>
+                <form method="POST" action="/favourite/<%= item.map_id %>/delete"><button class="btn-btn-primary-1" type="submit" >Delete</button></form>
+              </div>
+            <%} %>
+          </ul>
+              </div>
+              <div class="made-by-me">
+          <h4>Made By Me</h4>
+          <ul >
+            <% for (const ele of myMaps) { %>
 
-    <main class="logged-in-maps">
+                <div id="fav-map-list">
 
-      <!-- map basic test -->
-      <div id="map-with-title">
-      <div class="page-titles"><h1>Profile Page</h1></div>
-      <div id="map"></div>
-      </div>
+                <li><a href = "/maps/<%= ele.id  %>" ><%= ele.name %></a></li>
+                <form method="POST" action="/maps/<%= ele.id %>/delete"><button class="btn-btn-primary-1" type="submit" >Delete</button></form>
+              </div>
 
-      <div id="map-creation-stuff">
-      <div class="new-map">
+            <%} %>
+          </ul>
 
-        <form id="new-map-tables" method="POST" action="/maps">
-          <h4>Create New Map</h4>
-          <label for="title">Map Title:</label>
-          <input type="text" id="title" name="title"><br><br>
-          <label for="lon">Longitude:</label>
-          <input type="text" id="lon" name="lon"><br><br>
-          <label for="lat">Latitude:</label>
-          <input type="text" id="lat" name="lat"><br><br>
-          <input id="creation-submit" type="submit" value="Submit">
-        </form>
-      </div>
-
-      <div class="users-table">
-
-
-
-      <div class="fav-maps">
-        <h4>My Fav Maps</h4>
-        <ul >
-          <% for (const item of favs) { %>
-
-              <div id="fav-map-list">
-              <li><a href = "/maps/<%= item.map_id  %>" ><%= item.name %></a></li>
-              <form method="POST" action="/favourite/<%= item.map_id %>/delete"><button class="btn-btn-primary-1" type="submit" >Delete</button></form>
+              </div>
             </div>
-
-          <%} %>
-        </ul>
-      </div>
-
-
-      <div class="made-by-me">
-        <h4>Made By Me</h4>
-        <ul >
-          <% for (const ele of myMaps) { %>
-
-              <div id="fav-map-list">
-
-              <li><a href = "/maps/<%= ele.id  %>" ><%= ele.name %></a></li>
-              <form method="POST" action="/maps/<%= ele.id %>/delete"><button class="btn-btn-primary-1" type="submit" >Delete</button></form>
-            </div>
-
-          <%} %>
-        </ul>
-
-      </div>
-
-
-
-      </div>
-
-    </div>
-
-      </div>
-
-      <!-- map basic test -->
-      <!-- <div id="map"></div> -->
-      <script src="/scripts/user-map.js"> </script>
-
-    </main>
-
-
+          </div>
+        </div>
+        <!-- leaflet map box internals -->
+        <script src="/scripts/user-map.js">
+        </script>
+      </main>
   </body>
   <footer class="footer">
     <h6>Site created by: Charlee, Kevin, Molly</h6>

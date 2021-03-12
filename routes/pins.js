@@ -1,6 +1,8 @@
 const express = require('express');
 const router  = express.Router();
 
+const { img, images } = require('../db/helpers/images')
+
 module.exports = (db) => {
   router.get("/", (req, res) => {
     db.query(`SELECT * FROM pins;`)
@@ -26,8 +28,8 @@ module.exports = (db) => {
     // RETURNING *;
     // `);
     db.query(`
-    INSERT INTO pins (title, description, lon, lat)
-    VALUES ('${req.body.title}', '${req.body.description}', ${req.body.lon}, ${req.body.lat})
+    INSERT INTO pins (title, description, picture_url, lon, lat)
+    VALUES ('${req.body.title}','${req.body.description}', '${img(images)}',${req.body.lon}, ${req.body.lat})
     RETURNING *;
     `)
     .then(data => {

@@ -17,14 +17,11 @@ module.exports = (db) => {
       });
   });
 
-
-
-
   router.post("/", (req, res) => {
-    console.log("hello?", req.body)
+    console.log("user id", req.params.user_id)
     console.log(`
     INSERT INTO pins (title, description, picture_url, lon, lat)
-    VALUES (${req.body.title}, ${img(images)}, ${req.body.description}, ${req.body.lon[0]}, ${req.body.lat[0]})
+    VALUES (${req.body.title}, ${img(images)}, ${req.body.description}, ${req.body.lon}, ${req.body.lat})
     RETURNING *;
     `);
     db.query(`
@@ -41,12 +38,6 @@ module.exports = (db) => {
         .json({ error: err.message });
     });
   });
-
-
-
-
-
-
 
   return router;
 };

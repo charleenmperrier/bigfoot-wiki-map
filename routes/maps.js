@@ -4,18 +4,18 @@ const router  = express.Router();
 const cookieSession = require('cookie-session')
 
 module.exports = (db) => {
-  router.get("/api", (req, res) => {
-    db.query(`SELECT * FROM maps;`)
-      .then(data => {
-        const maps = data.rows;
-        res.json({ maps });
-      })
-      .catch(err => {
-        res
-          .status(500)
-          .json({ error: err.message });
-      });
-  });
+  // router.get("/api", (req, res) => {
+  //   db.query(`SELECT * FROM maps;`)
+  //     .then(data => {
+  //       const maps = data.rows;
+  //       res.json({ maps });
+  //     })
+  //     .catch(err => {
+  //       res
+  //         .status(500)
+  //         .json({ error: err.message });
+  //     });
+  // });
   router.get("/", (req, res) => {
     db.query(`SELECT * FROM maps;`)
     .then(data => {
@@ -26,8 +26,23 @@ module.exports = (db) => {
       }
       res.render('maps', templateVars);
     })
-
   });
+
+  router.get("/dfgdf", (req, res) => {
+    const username = req.session.user_id
+    // console.log('my Maps: ', `SELECT id FROM maps WHERE user_id = ${username}`)
+    db.query(`SELECT id
+    FROM maps
+    WHERE user_id = ${username}`)
+    .then(data => {
+      console.log('my data: ', data.rows)
+      const templateVars = {
+        myMaps: data.rows
+      }
+      res.render('logged-in', templateVars)
+    });
+  });
+
   //new query where map id = id
   router.get("/:id", (req, res) => {
     const username = req.session.user_id
@@ -60,6 +75,9 @@ module.exports = (db) => {
   });
   return router;
 };
+
+
+
 
 // (`insert into favourites (map_id, user_id) values (${mapID},
 //   (select u.id from users u where u.name ='${username}')) RETURNING * ;`)

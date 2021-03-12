@@ -54,6 +54,26 @@
         </ul>
 
       </div>
+
+
+      <div class="made-by-me">
+        <h4>Made By Me</h4>
+        <ul >
+          <% for (const ele of myMaps) { %>
+
+              <div class="fav-map-list">
+
+              <li><a href = "/maps/<%= ele.id  %>" ><%= ele.name %></a></li>
+
+            </div>
+
+          <%} %>
+        </ul>
+
+      </div>
+
+
+
       </div>
       <div class="new-map">
         <h4>Create New Map</h4>

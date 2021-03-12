@@ -40,7 +40,7 @@
     <div class="page-titles"><h1><%= name %> map</h1></div>
     <% if (username) { %>
 
-      <form method="POST" action="/favourite/<%= mapID %>">
+      <form id="heart" method="POST" action="/favourite/<%= mapID %>">
         <input type="submit" value="Fav Map">
       </form>
 

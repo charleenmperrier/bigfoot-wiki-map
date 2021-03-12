@@ -1,5 +1,5 @@
 const pins = require('./sightings');
-const images = require ('./images')
+const { img, images } = require ('./images')
 require('dotenv').config({path: '../../.env'});
 // console.log(pins.features[0])
 
@@ -8,25 +8,15 @@ require('dotenv').config({path: '../../.env'});
 
 const { Pool } = require('pg');
 const dbParams = require('../../lib/db.js');
-// const dbParams = {
-//   host: 'localhost',
-//   port: '5432',
-//   user: 'labber',
-//   password: 'labber',
-//   database: 'midterm'
-// }
+
 const db = new Pool(dbParams);
 db.connect();
 
-//promise to take objs we care so we don't lose them
-//future-- randomize across all three maps for each pin
-// same for users
 
-// const test = ['🌈', '🔫', '🏞', '🍉', 'bigfoot', 'sasquatch', '💃🏻']
-const img = (arr) => {
-  let random = Math.floor(Math.random() * arr.length)
-  return arr[random]
-}
+// const img = (arr) => {
+//   let random = Math.floor(Math.random() * arr.length)
+//   return arr[random]
+// }
 // map_id and user_id is hardcoded
 const insertPin = (title, description, lon, lat) => new Promise((resolve, reject) => {
   db.query(`INSERT INTO pins (title, description, picture_url, lon, lat, map_id, user_id) VALUES ($1, $2, $3, ${lon}, ${lat}, 1, 2)`, [title, description, img(images)])
@@ -47,4 +37,4 @@ const dataLoop = async function(obj){
   }
 }
  dataLoop(pins);
-// insertPin('title', 'bigfoot was here', -123.498, 48.889)
+

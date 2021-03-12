@@ -1,4 +1,7 @@
-
+const img = (arr) => {
+  let random = Math.floor(Math.random() * arr.length)
+  return arr[random]
+}
 const images = [
   'http://localhost:8080/static/bigfoot_1.jpeg',
   'http://localhost:8080/static/bigfoot_2.jpeg',
@@ -20,4 +23,7 @@ const images = [
   'http://localhost:8080/static/bigfoot_ukulele.jpeg'
 ]
 
-module.exports = images
+module.exports = {
+  images,
+  img
+}

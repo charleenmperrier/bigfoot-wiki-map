@@ -1,11 +1,12 @@
 // Map Element on page
 
+
 let map = L.map('map', {
   minZoom: 2,
   maxZoom: 10,
   worldCopyJump: true,
 
-}).setView([30, 0], 2);
+}).setView([46.710,-102.173], 3);
 
 // dynamic constraint
 let bounds = map.getBounds().pad(0.65)
@@ -29,7 +30,7 @@ getData()
 
 // zoom out on popup
 function zoomOut() {
-    map.flyTo([30, 0], 2, {duration: 0.5}).closePopup();
+    map.flyTo([46.710,-102.173], 3, {duration: 0.5}).closePopup();
 }
 
 
@@ -48,13 +49,21 @@ async function getData() {
 
     <form action='http://localhost:8080/api/pins/${item.id}/delete' method="POST">
     <input type="Submit" value="Delete" name="">
-    </form>  `;
+    </form>
+    `;
 
 
 // zoom in on popup
     marker.on('click', function(e){
       map.flyTo([e.latlng.lat, e.latlng.lng], 5, {duration: 0.5});
+    });
 
+
+    // set popup in center
+    map.on('popupopen', function(e) {
+      var px = map.project(e.target._popup._latlng);
+      px.y -= e.target._popup._container.clientHeight/2;
+      map.panTo(map.unproject(px),{animate: true});
     });
 
     marker.bindPopup(txt);

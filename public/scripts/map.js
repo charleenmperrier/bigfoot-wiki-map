@@ -5,7 +5,7 @@ let map = L.map('map', {
   maxZoom: 10,
   worldCopyJump: true,
 
-}).setView([30, 0], 2);
+}).setView([46.710,-102.173], 3);
 
 // dynamic constraint
 let bounds = map.getBounds().pad(0.65)
@@ -29,7 +29,7 @@ getData()
 
 // zoom out on popup
 function zoomOut() {
-    map.flyTo([30, 0], 2, {duration: 0.5}).closePopup();
+    map.flyTo([46.710,-102.173], 3, {duration: 0.5}).closePopup();
 }
 
 

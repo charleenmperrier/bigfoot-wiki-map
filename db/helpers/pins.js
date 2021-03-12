@@ -13,10 +13,6 @@ const db = new Pool(dbParams);
 db.connect();
 
 
-// const img = (arr) => {
-//   let random = Math.floor(Math.random() * arr.length)
-//   return arr[random]
-// }
 // map_id and user_id is hardcoded
 const insertPin = (title, description, lon, lat) => new Promise((resolve, reject) => {
   db.query(`INSERT INTO pins (title, description, picture_url, lon, lat, map_id, user_id) VALUES ($1, $2, $3, ${lon}, ${lat}, 1, 2)`, [title, description, img(images)])
@@ -28,13 +24,12 @@ const insertPin = (title, description, lon, lat) => new Promise((resolve, reject
 
 const dataLoop = async function(obj){
   for (let index in obj.features) {
-    console.log(`adding another item ${index} of ${obj.features.length}!`)
-    // console.log(pin.attributes)
-    // console.log(img(test))
-    // console.log(img(images))
+    console.log(`adding pin ${Number(index) +1} of ${obj.features.length}!`)
     const {name, descriptio, Lon, Lat} = obj.features[index].attributes
     await insertPin(name, descriptio, Lon, Lat)
   }
 }
- dataLoop(pins);
+//  dataLoop(pins);
+
+module.exports = { dataLoop };
 

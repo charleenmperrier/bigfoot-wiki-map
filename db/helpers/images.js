@@ -1,3 +1,6 @@
+// loads random image from images array into each pin
+
+
 const img = (arr) => {
   let random = Math.floor(Math.random() * arr.length);
   return arr[random];

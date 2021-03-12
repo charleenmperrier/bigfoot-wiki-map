@@ -46,26 +46,19 @@ const usersRoutes = require("./routes/users");
 const mapsRoutes = require('./routes/maps');
 const loginRoutes = require('./routes/login')
 const favRoutes = require('./routes/favourites')
-// const widgetsRoutes = require("./routes/widgets");
 
 // Mount all resource routes
 // Note: Feel free to replace the example routes below with your own
+// Note: mount other resources here, using the same pattern
 app.use("/api/pins", pinsRoutes(db));
 app.use("/api/users", usersRoutes(db));
-// app.use("/api/maps", mapsRoutes(db));
 app.use('/login', loginRoutes(db));
 app.use("/maps", mapsRoutes(db));
 app.use("/favourite", favRoutes(db));
-// app.use("/api/widgets", widgetsRoutes(db));
-// Note: mount other resources here, using the same pattern above
 
 
 // Home page
-// Warning: avoid creating more routes in this file!
-// Separate them into separate routes files (see above).
-// app.get("/", (req, res) => {
-//   res.redirect("maps");
-// });
+
 app.get("/", (req, res) => {
   const username = req.session.user_id;
     const templateVars = {username}
@@ -79,25 +72,8 @@ app.get("/test", (req, res) => {
   res.render("map-constrain", templateVars);
 });
 
-// app.get("/login", (req,res) => {
-//   const username = req.session.user_id;
-//   const templateVars = {username}
-//   res.render("logged-in", templateVars);
-// });
-
-
-// Logged in page
-// app.post("/login", (req, res) => {
-
-//   console.log('req.body: ', req.body)
-//     req.session.user_id = req.body.username;
-
-//   res.redirect('/login')
-// });
-
 
 app.get("/logout", (req, res) => {
-  // req.session.user_id = req.params.id;
   req.session = null;
   res.redirect('maps');
 
@@ -107,12 +83,8 @@ app.get('/error', (req, res) => {
   res.render('error')
 })
 
-// app.post('/pins', (req, res) => {
-//   console.log(req.body);
-//   // console.log("hello")
-//   res.redirect('maps')
-// });
+//
 
 app.listen(PORT, () => {
-  console.log(`Bigfoot is watching you from ${PORT}! 👀`);
+  console.log(`Bigfoot is watching you from port ${PORT}! 👀`);
 });

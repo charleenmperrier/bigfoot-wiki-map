@@ -33,7 +33,7 @@ module.exports = (db) => {
     RETURNING *;
     `)
     .then(data => {
-      res.redirect('/maps')
+      res.redirect('/favourite')
     })
     .catch(err => {
       res

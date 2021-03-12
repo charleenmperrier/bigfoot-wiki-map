@@ -28,13 +28,9 @@
 
   <body>
       <%- include('partials/nav-bar') %>
-
       <header id="login-head">
-
       </header>
-    <!-- map basic test -->
     <div class="page-titles"> <h1>Welcome!</h1></div>
-
     <div id="map-main">
     <h3>World map of Big foot sightings</h3>
     <div id="map"></div>
@@ -46,12 +42,9 @@
       <ol>
         <% for (const item of maps) { %>
           <li><a href = "/maps/<%= item.id  %>" ><%= item.name %></a></li>
-
         <%} %>
-
       </ol>
     </div>
-
 </body>
 <footer class="footer">
   <h6>Site created by: Charlee, Kevin, Molly</h6>

@@ -22,13 +22,13 @@ Map of Lower Mainland and Vancouver Island
 - Clone this repo into your favourite directory 
 - In the command line, run `npm install` to install all dependencies
 - Run `npm run database` to load the databases and once the pins are loaded, `ctl + c` to exit the script. 
-- Run `npm run local` to start the server-- don't worry, our friendly (no)Demon will keep the server running. If you want to view the inner workings of the server, watch the terminal and Morgan will tell you all of our sercrets.
+- Run `npm run local` to start the server
 - In your browser, visit `localhost:8080` 
 - Have fun, and tell us if you find Bigfoot!
 
 ## Dependancies 
 - Node 10.20.x or above
-- NPM (Noodle Package Manager)
+- NPM 
 - Postgres/ PG
 - Express.js
 - Leaflet.js

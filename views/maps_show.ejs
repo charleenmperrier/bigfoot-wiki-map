@@ -43,19 +43,13 @@
         <input type="submit" value="Fav Map">
       </form>
 
-      <!-- <form method="POST" action="/favourite" >
-        <div id="heart"><i onclick="myFunction(this)" class="fa fa-heart"></i> </div>
-      </form> -->
     <% } %>
 
   </div>
+
     <!-- pull specific map from template vars (map)  -->
-
-
     <div id="map"></div>
-
     <script>
-
     let map = L.map('map', {
       minZoom: 7,
       maxZoom: 10,
@@ -78,10 +72,7 @@
 
     getData()
 
-    // Toggle switch of Heart to Red Heart
-    // function myFunction(x) {
-    //   x.classList.toggle("fa-fa-heart");
-    // }
+
 
     // zoom out on popup
     function zoomOut() {
@@ -104,9 +95,9 @@
 
         <% if (username) { %>
         <form action='http://localhost:8080/api/pins/${item.id}/delete' method="POST">
-    <input type="Submit" value="Delete" name="">
-    </form>
-    <% } %> `;
+        <input type="Submit" value="Delete" name="">
+        </form>
+        <% } %> `;
 
 
     // zoom in on popup
@@ -147,37 +138,31 @@ if (theMarker !== undefined) {
 //Add a marker to show where you clicked.
 theMarker = L.marker([lat,lon]).addTo(map).bindPopup(
 `<form action='/api/pins' method="POST" onSubmit="">
-<table>
-<tr>
-
-<td>
-  <input type="text" placeholder="Title" name="title">
-</td>
-<tr>
-<td>
-  <input type="text" placeholder="Description" name="description">
-  <input type="hidden" value=${lon} name="lon">
-  <input type="hidden" value=${lat} name="lat">
-
-
-</td>
-</tr>
-<tr>
-
-
-<td>
-  <p name="lonLat" value="{[(lat).toFixed(3), (lon).toFixed(3)]}">Input this in Lat/Lon ${[(lat).toFixed(3), (lon).toFixed(3)]} </p>
-  </tr>
-</tr>
-</td>
-</tr>
-<tr>
-<td>
-  <input type="Submit" value="Add Pin" name="">
-</td>
-</tr>
-</table>
-
+  <table>
+    <tr>
+    <td>
+      <input type="text" placeholder="Title" name="title">
+    </td>
+    <tr>
+      <td>
+        <input type="text" placeholder="Description" name="description">
+        <input type="hidden" value=${lon} name="lon">
+        <input type="hidden" value=${lat} name="lat">
+      </td>
+    </tr>
+      <tr>
+      <td>
+        <p name="lonLat" value="{[(lat).toFixed(3), (lon).toFixed(3)]}">Input this in Lat/Lon ${[(lat).toFixed(3), (lon).toFixed(3)]} </p>
+        </tr>
+      </tr>
+      </td>
+      </tr>
+    <tr>
+      <td>
+        <input type="Submit" value="Add Pin" name="">
+      </td>
+    </tr>
+  </table>
 </form>
 
 `).openPopup();

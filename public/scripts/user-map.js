@@ -44,7 +44,11 @@ async function getData() {
       title: "big foot sighting",
     }).addTo(map);
 
-    let txt = `<h1> ${item.title} </h1> <div> <img src= "${item.picture_url}" height="150px" width="auto"/> <p id="description"> ${item.description} </p> <p id="longLat">location at ${[(item.lat).toFixed(2), (item.lon).toFixed(2)]} </p><button onclick="zoomOut()"> zoom out </button> `;
+    let txt = `<h1> ${item.title} </h1> <div> <img src= "${item.picture_url}" height="150px" width="auto"/> <p id="description"> ${item.description} </p> <p id="longLat">location at ${[(item.lat).toFixed(2), (item.lon).toFixed(2)]} </p><button onclick="zoomOut()"> zoom out </button>
+
+    <form action='http://localhost:8080/api/pins/${item.id}/delete' method="POST">
+    <input type="Submit" value="Delete" name="">
+    </form>  `;
 
 
 // zoom in on popup
@@ -89,12 +93,11 @@ async function getData() {
         <input type="text" placeholder="Description" name="description">
         <input type="hidden" value=${lon} name="lon">
         <input type="hidden" value=${lat} name="lat">
-
       </td>
     </tr>
       <tr>
 
-
+      <tr>
       <td>
         <p name="lonLat" value="{[(lat).toFixed(3), (lon).toFixed(3)]}">Input this in Lat/Lon ${[(lat).toFixed(3), (lon).toFixed(3)]} </p>
         </tr>
@@ -105,7 +108,7 @@ async function getData() {
       <td>
         <input type="Submit" value="Add Pin" name="">
         <input type="Submit" value="Add Map" name="">
-        <input type="Submit" value="Delete" name="">
+
       </td>
     </tr>
     </table>
@@ -115,21 +118,4 @@ async function getData() {
 
 
 
-      //old backup code
-      // image source format
-      // <img src= ${'"'+item.picture_url+'"'} height="150px" width="auto"/>
-
-
-    //   <div class="marker-comment">
-    //   <input id="mapID" type="name" placeholder="Location"/>
-    //   <input id="name" type="date" placeholder="Date"/>
-
-    //   <input id="description" type="text" placeholder="Description"/>
-    //   <p id="lonLat">location at ${[(lat).toFixed(3), (lon).toFixed(3)]} </p>
-    // </div>
-
-    // <div>
-    // <button type="submit" class="btn btn-primary">save location</button></form>
-
-    // <button type="submit" class="btn btn-primary">delete location</button></form>
-    // </div>
+      // <input type="Submit" value="Delete" name="">

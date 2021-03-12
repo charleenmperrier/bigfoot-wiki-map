@@ -14,30 +14,30 @@ module.exports = (db) => {
     JOIN maps ON maps.id = map_id
     WHERE users.name LIKE '%${username}%'
     ;`)
-    .then(data => {
-      db.query(`
-      SELECT *
-      FROM maps
-      WHERE user_id = (SELECT id FROM users WHERE name = '${username}')
-      ;`)
-      .then(data2 => {
-        const templateVars = {
-          username,
-          favs: data.rows,
-          myMaps: data2.rows
-        }
-      res.render('logged-in', templateVars);
+      .then(data => {
+        db.query(`
+        SELECT *
+        FROM maps
+        WHERE user_id = (SELECT id FROM users WHERE name = '${username}')
+        ;`)
+          .then(data2 => {
+            const templateVars = {
+              username,
+              favs: data.rows,
+              myMaps: data2.rows
+            }
+          res.render('logged-in', templateVars);
+          })
+          .catch(err => {
+            res
+            .status(500)
+            .json({ error: err.message });
+            });
       })
       .catch(err => {
         res
         .status(500)
         .json({ error: err.message });
-        });
-    })
-    .catch(err => {
-      res
-      .status(500)
-      .json({ error: err.message });
       });
   });
 

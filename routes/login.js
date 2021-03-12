@@ -11,19 +11,19 @@ module.exports = (db) => {
     FROM users
     WHERE name LIKE '%${username}%'
     ;`)
-    .then(data => {
-      if (data.rowCount !== 1) {
-      res.redirect("/error");
-      return;
-      }
-      req.session.user_id = username;
-      res.redirect('/maps');
-    })
-    .catch(err => {
-      res
-      .status(403)
-      .send('error 403: username not found');
-      });
+      .then(data => {
+        if (data.rowCount !== 1) {
+        res.redirect("/error");
+        return;
+        }
+        req.session.user_id = username;
+        res.redirect('/maps');
+      })
+      .catch(err => {
+        res
+        .status(403)
+        .send('error 403: username not found');
+        });
   });
 
   router.get("/", (req, res) => {

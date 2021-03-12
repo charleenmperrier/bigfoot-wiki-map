@@ -20,14 +20,14 @@ module.exports = (db) => {
     db.query(`SELECT *
     FROM maps
     ;`)
-    .then(data => {
-      const username = req.session.user_id;
-      const templateVars = {
-        username,
-        maps: data.rows
-      };
-      res.render('maps', templateVars);
-    })
+      .then(data => {
+        const username = req.session.user_id;
+        const templateVars = {
+          username,
+          maps: data.rows
+        };
+        res.render('maps', templateVars);
+      })
   });
 
 
@@ -59,9 +59,9 @@ module.exports = (db) => {
     VALUES ('${req.body.title}', ${req.body.lon}, ${req.body.lat},
     (SELECT id FROM users WHERE name = '${username}'))
     ;`)
-    .then (data => {
-      res.redirect('/maps')
-    });
+      .then (data => {
+        res.redirect('/maps')
+      });
   });
 
   router.post('/:id/delete', (req,res) => {
@@ -72,10 +72,10 @@ module.exports = (db) => {
     FROM maps
     WHERE id = ${mapID}
     ;`)
-    .then(data => {
-      const favMap = data.rows;
-      res.redirect('/favourite')
-    })
+      .then(data => {
+        const favMap = data.rows;
+        res.redirect('/favourite')
+      })
 
   });
   return router;

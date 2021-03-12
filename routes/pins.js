@@ -41,17 +41,17 @@ module.exports = (db) => {
   });
 
 
-  // router.post('/:id/delete', (req,res) => {
-  //   const mapID = req.params.id
-  //   console.log('mapID delete: ', mapID)
-  //   db.query(`
-  //   DELETE
-  //   FROM pins
-  //   WHERE map_id = ${mapID}
-  //   ;
-  //   `)
+  router.post('/:id/delete', (req,res) => {
+    // const mapID = req.params.id
+    console.log('user_id: ', req.boddy.user_id)
+    // db.query(`
+    // DELETE
+    // FROM pins
+    // WHERE map_id = ${mapID}
+    // ;
+    // `)
 
-
+  })
 
 
   return router;

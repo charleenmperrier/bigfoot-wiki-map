@@ -114,7 +114,8 @@
 
     }
 
-    let theMarker = {};
+
+let theMarker = {};
 
 map.on('click',function(e){
 lat = e.latlng.lat;
@@ -165,6 +166,7 @@ theMarker = L.marker([lat,lon]).addTo(map).bindPopup(
 `).openPopup();
 });
     </script>
+
    <% } %>
 
 

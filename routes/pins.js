@@ -19,12 +19,12 @@ module.exports = (db) => {
 
 
   router.post("/", (req, res) => {
-    console.log("hello?", req.body)
-    console.log(`
-    INSERT INTO pins (title, description, lon, lat)
-    VALUES (${req.body.title}, ${req.body.description}, ${req.body.lon[0]}, ${req.body.lat[0]})
-    RETURNING *;
-    `);
+    // console.log("hello?", req.body)
+    // console.log(`
+    // INSERT INTO pins (title, description, lon, lat)
+    // VALUES (${req.body.title}, ${req.body.description}, ${req.body.lon[0]}, ${req.body.lat[0]})
+    // RETURNING *;
+    // `);
     db.query(`
     INSERT INTO pins (title, description, lon, lat)
     VALUES ('${req.body.title}', '${req.body.description}', ${req.body.lon}, ${req.body.lat})
@@ -41,7 +41,15 @@ module.exports = (db) => {
   });
 
 
-
+  // router.post('/:id/delete', (req,res) => {
+  //   const mapID = req.params.id
+  //   console.log('mapID delete: ', mapID)
+  //   db.query(`
+  //   DELETE
+  //   FROM pins
+  //   WHERE map_id = ${mapID}
+  //   ;
+  //   `)
 
 
 

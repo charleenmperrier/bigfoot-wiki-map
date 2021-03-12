@@ -89,12 +89,11 @@ async function getData() {
         <input type="text" placeholder="Description" name="description">
         <input type="hidden" value=${lon} name="lon">
         <input type="hidden" value=${lat} name="lat">
-
       </td>
     </tr>
       <tr>
 
-
+      <tr>
       <td>
         <p name="lonLat" value="{[(lat).toFixed(3), (lon).toFixed(3)]}">Input this in Lat/Lon ${[(lat).toFixed(3), (lon).toFixed(3)]} </p>
         </tr>

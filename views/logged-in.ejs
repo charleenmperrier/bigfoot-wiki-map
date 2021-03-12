@@ -37,7 +37,7 @@
 
       <!-- map basic test -->
       <div id="map-with-title">
-      <div class="page-titles"><h1>Users Page</h1></div>
+      <div class="page-titles"><h1>Profile Page</h1></div>
       <div id="map"></div>
       </div>
 
@@ -80,7 +80,7 @@
         <ul >
           <% for (const ele of myMaps) { %>
 
-              <div class="fav-map-list">
+              <div id="fav-map-list">
 
               <li><a href = "/maps/<%= ele.id  %>/delete" ><%= ele.name %></a></li>
               <form method="POST" action="/maps/<%= ele.id %>/delete"><button class="btn-btn-primary-1" type="submit" >Delete</button></form>

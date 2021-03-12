@@ -29,7 +29,7 @@ getData()
 
 // zoom out on popup
 function zoomOut() {
-    map.flyTo([55, -101.2996], 4, {duration: 0.5}).closePopup();
+    map.flyTo([30, 0], 2, {duration: 0.5}).closePopup();
 }
 
 

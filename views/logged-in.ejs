@@ -36,25 +36,44 @@
     <main class="logged-in-maps">
 
       <!-- map basic test -->
+      <div id="map-with-title">
       <div class="page-titles"><h1>Users Page</h1></div>
       <div id="map"></div>
+      </div>
+
+      <div id="map-creation-stuff">
+      <div class="new-map">
+        <h4>Create New Map</h4>
+        <form method="POST" action="/maps">
+          <label for="title">Map Title:</label>
+          <input type="text" id="title" name="title"><br><br>
+          <label for="lon">Longitude:</label>
+          <input type="text" id="lon" name="lon"><br><br>
+          <label for="lat">Latitude:</label>
+          <input type="text" id="lat" name="lat"><br><br>
+          <input type="submit" value="Submit">
+        </form>
+      </div>
 
       <div class="users-table">
+
+
+
       <div class="fav-maps">
         <h4>My Fav Maps</h4>
         <ul >
           <% for (const item of favs) { %>
 
-              <div class="fav-map-list">
+              <div id="fav-map-list">
               <li><a href = "/maps/<%= item.map_id  %>" ><%= item.name %></a></li>
               <form method="POST" action="/favourite/<%= item.map_id %>/delete"><button class="btn-btn-primary-1" type="submit" >Delete</button></form>
             </div>
 
           <%} %>
         </ul>
-
       </div>
 
+<<<<<<< HEAD
 
       <div class="made-by-me">
         <h4>Made By Me</h4>
@@ -74,21 +93,18 @@
 
 
 
+=======
+      <div class="dummy">
+        <h4>My Creations</h4>
+>>>>>>> 432a4c1d3f8df112009365f1e2cc1c1d1186e17d
       </div>
-      <div class="new-map">
-        <h4>Create New Map</h4>
-        <form method="POST" action="/maps">
-          <label for="title">Map Title:</label>
-          <input type="text" id="title" name="title"><br><br>
-          <label for="lon">Longitude:</label>
-          <input type="text" id="lon" name="lon"><br><br>
-          <label for="lat">Latitude:</label>
-          <input type="text" id="lat" name="lat"><br><br>
-          <input type="submit" value="Submit">
-        </form>
+
+    </div>
+
       </div>
+
       <!-- map basic test -->
-      <div id="map"></div>
+      <!-- <div id="map"></div> -->
       <script src="/scripts/user-map.js"> </script>
 
     </main>

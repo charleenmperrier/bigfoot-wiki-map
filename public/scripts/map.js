@@ -11,7 +11,7 @@ let map = L.map('map', {
 let bounds = map.getBounds().pad(0.65)
 map.setMaxBounds(bounds);
 
-// console.log(map.getBounds())
+
 
 const attribution = '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>';
 const tileUrl = 'https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=wpKyMC536a0ZlXqAX7iu';
@@ -20,12 +20,9 @@ const tileUrl = 'https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=wpKyM
 const tiles = L.tileLayer(tileUrl, { attribution });
 tiles.addTo(map);
 
-getData()
+getData();
 
-// Toggle switch of Heart to Red Heart
-// function myFunction(x) {
-//   x.classList.toggle("fa-fa-heart");
-// }
+
 
 // zoom out on popup
 function zoomOut() {
@@ -37,7 +34,7 @@ function zoomOut() {
 async function getData() {
   const response = await fetch('/api/pins');
   const data = await response.json();
-  // console.log(data.pins)
+
   for (item of data.pins) {
     const marker = L.marker([item.lat, item.lon], {
       // hover description
@@ -61,6 +58,6 @@ async function getData() {
 
     marker.bindPopup(txt);
   }
-  // console.log(data)
+
 }
 

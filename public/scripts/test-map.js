@@ -9,9 +9,9 @@ getMapData()
 async function getMapData() {
   const response = await fetch('/maps/api');
   const data = await response.json();
-  console.log("yo", data.api)
+
   for (item of api) {
-    console.log("hello", item)
+    // console.log("hello", item)
     }
 }
 
@@ -25,7 +25,7 @@ let map = L.map('map', {
 let bounds = map.getBounds().pad(.3)
 map.setMaxBounds(bounds);
 
-// console.log(map.getBounds())
+
 
 const attribution = '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>';
 const tileUrl = 'https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=wpKyMC536a0ZlXqAX7iu';
@@ -35,12 +35,12 @@ const tiles = L.tileLayer(tileUrl, { attribution });
 tiles.addTo(map);
 
 
-getData()
+getData();
 
-// Toggle switch of Heart to Red Heart
-function myFunction(x) {
-  x.classList.toggle("fa-fa-heart");
-}
+// // Toggle switch of Heart to Red Heart
+// function myFunction(x) {
+//   x.classList.toggle("fa-fa-heart");
+// }
 
 // zoom out on popup
 function zoomOut() {
@@ -70,7 +70,7 @@ async function getData() {
 
     marker.bindPopup(txt);
   }
-  // console.log(data)
+
 }
 
 

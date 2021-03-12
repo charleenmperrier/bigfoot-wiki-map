@@ -21,12 +21,9 @@ const tileUrl = 'https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=wpKyM
 const tiles = L.tileLayer(tileUrl, { attribution });
 tiles.addTo(map);
 
-getData()
+getData();
 
-// Toggle switch of Heart to Red Heart
-// function myFunction(x) {
-//   x.classList.toggle("fa-fa-heart");
-// }
+
 
 // zoom out on popup
 function zoomOut() {
@@ -38,7 +35,7 @@ function zoomOut() {
 async function getData() {
   const response = await fetch('/api/pins');
   const data = await response.json();
-  // console.log(data.pins)
+
   for (item of data.pins) {
     const marker = L.marker([item.lat, item.lon], {
       // hover description
@@ -68,7 +65,7 @@ async function getData() {
 
     marker.bindPopup(txt);
   }
-  // console.log(data)
+
 }
 
 

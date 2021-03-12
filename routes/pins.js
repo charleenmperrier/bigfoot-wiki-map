@@ -46,13 +46,11 @@ module.exports = (db) => {
   router.post('/:id/delete', (req,res) => {
     const username = req.session.user_id
     console.log(req.body)
-console.log(req.params.id);
+    console.log(req.params.id);
     db.query(`
     DELETE
     FROM pins
     WHERE id = ${req.params.id}
-
-
     ;
     `)
     .then(data => {

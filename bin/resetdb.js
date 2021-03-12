@@ -1,5 +1,7 @@
 // load .env data into process.env
 require('dotenv').config();
+const pins = require('../db/helpers/sightings');
+const { dataLoop } = require('../db/helpers/pins');
 
 // other dependencies
 const fs = require('fs');
@@ -43,6 +45,7 @@ try {
 } catch (err) {
   console.error(chalk.red(`Failed due to error: ${err}`));
   client.end();
-}
+};
 
 
+dataLoop(pins);
